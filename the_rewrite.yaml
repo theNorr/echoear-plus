@@ -1,0 +1,394 @@
+# variables and such, that is available for usage everywhere within the code:
+substitutions:
+  name: emo-dot-esphome
+  friendly_name: emo-dot-esphome
+
+  #display specific:
+  imagewidth:  "360"
+  imageheight: "360"
+  rotate_display: "0"
+
+  #images:
+  success_image_file: "https://raw.githubusercontent.com/RealDeco/xiaozhi-esphome/main/images/Gwen/360x360/replying.png"
+
+#platform-specific components and configurations:
+esp32:
+  board: esp32-s3-devkitc-1
+  flash_size: 16MB
+  cpu_frequency: 240MHz
+  framework:
+    type: esp-idf
+    advanced:
+      enable_idf_experimental_features: yes                 # Denna ger tydligen tillgång till mer avancerad PSRAM-hantering, Nyare I2S- och SPI-drivrutiner, nyare hårdvarustöd relatert ESP S3 samt fler inställningar i sdkconfig.
+    sdkconfig_options:
+      CONFIG_ESP32S3_DEFAULT_CPU_FREQ_240: "y"
+      CONFIG_ESP32S3_DATA_CACHE_64KB: "y"
+      CONFIG_ESP32S3_DATA_CACHE_LINE_64B: "y"
+
+#Details about the FW:
+esphome:
+  name: ${name}
+  friendly_name: ${friendly_name}
+  min_version: 2025.9.0
+  name_add_mac_suffix: false                              # Defaults to false, så vet egentligen inte varför den är med. Kanske är något annat i koden som ställer om den annars.
+  on_boot:
+    priority: -100                                        # Is needed for the touchpanel, the setup looks alright in the logs when we have this.
+    then:
+      - delay: 500ms
+
+#Available memory and how it's used:      
+psram:
+  mode: octal                                               # Detta säger åt FW att använda alla 8 "datapinnar" för dataöverföring.
+  speed: 80MHz
+
+#Wifi settings:
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  # Enable fallback hotspot (captive portal) in case wifi connection fails:
+  ap:
+    ssid: "EchoEar-plus"
+    password: !secret emo_dot_ap
+
+#Update settings:
+ota:
+  - platform: esphome
+    password: !secret emo_dot_ota
+    id: ota_esphome
+
+#A fallback mechanism for when connecting to the configured WiFi fails, i.e. activates the AP:
+captive_portal:
+
+#Lets you make HTTP/HTTPS requests:
+http_request:
+
+#Enables logging, and related configuration:
+logger:
+  level: VERY_VERBOSE
+  logs:
+    touchscreen: VERY_VERBOSE
+    cst816: VERY_VERBOSE
+    i2c: DEBUG
+    substitutions: DEBUG
+    esp32: DEBUG
+    esphome: DEBUG
+    psram: DEBUG
+    wifi: DEBUG
+    ota: DEBUG
+    captive_portal: DEBUG
+    http_request: DEBUG
+    api: DEBUG
+    output: DEBUG
+    light: DEBUG
+    image: DEBUG
+    font: DEBUG
+    spi: DEBUG
+    display: DEBUG
+
+#Home Assistant and ioBroker use this native API:
+api:
+  encryption:
+    key: !secret emo_dot_ha_encr_key
+
+#There don’t seem to be any touch pads. I’ve tested both GPIO7, which according to the schematic is IO7 Touch and according to the firmware is TOUCH_PAD1, and GPIO6, which according to the schematic is IO6/Battery level and according to the firmware is TOUCH_PAD2_2. I also can’t find anything physically on the board that confirms the presence of touch pads:
+#esp32_touch:
+#  setup_mode: true
+
+#Output exposes hardware functionality to ESPHome.
+output:
+  # The display backlight exposed as an output in ESPHome:
+  - platform: ledc
+    id: backlight_output
+    pin: GPIO42
+    inverted: true
+
+#The Light partition allows controll of single addressable lights or a combination of addressable light segments:
+light:
+  # Turns the display backlight on:
+  - platform: monochromatic
+    id: sled
+    name: Screen
+    icon: mdi:television
+    entity_category: config
+    output: backlight_output
+    restore_mode: ALWAYS_ON
+    default_transition_length: 250ms
+
+#Stores graphical images on the device, you can then draw the images on compatible displays:
+image:
+  - file: ${success_image_file}
+    id: success_img
+    resize: ${imagewidth}x${imageheight}
+    type: RGB565
+
+#The fonts in use is defined here:
+font:
+  - file: "gfonts://Roboto"
+    id: my_font
+    size: 20
+
+#Used for the touchscreen, CST816S (or CST816T, according to the logs from the physical ESP, with address 0x15; see also the touchscreen component):
+i2c:
+  - id: bus_a
+    scl: GPIO1
+    sda: GPIO2
+    frequency: 50kHz
+    scan: True
+
+#Nothing seems to be reported through the interrupt pin so this doesn't seem to work. Everything else works in this current form.
+touchscreen:
+  - platform: cst816
+    id: my_touchscreen
+    interrupt_pin: GPIO40                                         # If inverted: NACK.
+    skip_probe: True                                              
+    address: 0x15                                                 
+    display: main_display
+    i2c_id: bus_a                                                 
+    on_touch:
+      - logger.log: "touchade skärmen"
+    on_release:
+      - logger.log: "Släppte skärmen."
+
+spi:
+  id: display_qspi
+  type: quad
+  clk_pin: 41
+  data_pins: 
+    - number: 21
+    - number: 48
+    - number: 47
+    - number: 45
+
+display:
+  - platform: mipi_spi
+    id: main_display
+    bus_mode: quad
+    model: CUSTOM
+    spi_id: display_qspi
+    color_order: rgb
+    invert_colors: true
+    dimensions:
+        height: ${imageheight}
+        width: ${imagewidth}
+    cs_pin: 39
+    rotation: ${rotate_display}
+    update_interval: never
+    init_sequence:
+      # -------- Vendor init (bank 0x28) --------
+      - [0xF0, 0x28]
+      - [0xF2, 0x28]
+      - [0x73, 0xF0]
+      - [0x7C, 0xD1]
+      - [0x83, 0xE0]
+      - [0x84, 0x61]
+      - [0xF2, 0x82]
+      - [0xF0, 0x00]
+
+      # -------- Vendor init (bank 0x01) --------
+      - [0xF0, 0x01]
+      - [0xF1, 0x01]
+      - [0xB0, 0x56]
+      - [0xB1, 0x4D]
+      - [0xB2, 0x24]
+      - [0xB4, 0x87]
+      - [0xB5, 0x44]
+      - [0xB6, 0x8B]
+      - [0xB7, 0x40]
+      - [0xB8, 0x86]
+      - [0xBA, 0x00]
+      - [0xBB, 0x08]
+      - [0xBC, 0x08]
+      - [0xBD, 0x00]
+      - [0xC0, 0x80]
+      - [0xC1, 0x10]
+      - [0xC2, 0x37]
+      - [0xC3, 0x80]
+      - [0xC4, 0x10]
+      - [0xC5, 0x37]
+      - [0xC6, 0xA9]
+      - [0xC7, 0x41]
+      - [0xC8, 0x01]
+      - [0xC9, 0xA9]
+      - [0xCA, 0x41]
+      - [0xCB, 0x01]
+      - [0xD0, 0x91]
+      - [0xD1, 0x68]
+      - [0xD2, 0x68]
+      - [0xF5, 0x00, 0xA5]
+      - [0xDD, 0x4F]
+      - [0xDE, 0x4F]
+      - [0xF1, 0x10]
+      - [0xF0, 0x00]
+
+      # -------- Gamma (bank 0x02) --------
+      - [0xF0, 0x02]
+      - [0xE0, 0xF0, 0x0A, 0x10, 0x09, 0x09, 0x36, 0x35, 0x33, 0x4A, 0x29, 0x15, 0x15, 0x2E, 0x34]
+      - [0xE1, 0xF0, 0x0A, 0x0F, 0x08, 0x08, 0x05, 0x34, 0x33, 0x4A, 0x39, 0x15, 0x15, 0x2D, 0x33]
+
+      # -------- Power / timing --------
+      - [0xF0, 0x10]
+      - [0xF3, 0x10]
+      - [0xE0, 0x07]
+      - [0xE1, 0x00]
+      - [0xE2, 0x00]
+      - [0xE3, 0x00]
+      - [0xE4, 0xE0]
+      - [0xE5, 0x06]
+      - [0xE6, 0x21]
+      - [0xE7, 0x01]
+      - [0xE8, 0x05]
+      - [0xE9, 0x02]
+      - [0xEA, 0xDA]
+      - [0xEB, 0x00]
+      - [0xEC, 0x00]
+      - [0xED, 0x0F]
+      - [0xEE, 0x00]
+      - [0xEF, 0x00]
+      - [0xF8, 0x00]
+      - [0xF9, 0x00]
+      - [0xFA, 0x00]
+      - [0xFB, 0x00]
+      - [0xFC, 0x00]
+      - [0xFD, 0x00]
+      - [0xFE, 0x00]
+      - [0xFF, 0x00]
+
+      # -------- GOA / scan configuration --------
+      - [0x60, 0x40]
+      - [0x61, 0x04]
+      - [0x62, 0x00]
+      - [0x63, 0x42]
+      - [0x64, 0xD9]
+      - [0x65, 0x00]
+      - [0x66, 0x00]
+      - [0x67, 0x00]
+      - [0x68, 0x00]
+      - [0x69, 0x00]
+      - [0x6A, 0x00]
+      - [0x6B, 0x00]
+
+      - [0x70, 0x40]
+      - [0x71, 0x03]
+      - [0x72, 0x00]
+      - [0x73, 0x42]
+      - [0x74, 0xD8]
+      - [0x75, 0x00]
+      - [0x76, 0x00]
+      - [0x77, 0x00]
+      - [0x78, 0x00]
+      - [0x79, 0x00]
+      - [0x7A, 0x00]
+      - [0x7B, 0x00]
+
+      - [0x80, 0x48]
+      - [0x81, 0x00]
+      - [0x82, 0x06]
+      - [0x83, 0x02]
+      - [0x84, 0xD6]
+      - [0x85, 0x04]
+      - [0x86, 0x00]
+      - [0x87, 0x00]
+
+      - [0x88, 0x48]
+      - [0x89, 0x00]
+      - [0x8A, 0x08]
+      - [0x8B, 0x02]
+      - [0x8C, 0xD8]
+      - [0x8D, 0x04]
+      - [0x8E, 0x00]
+      - [0x8F, 0x00]
+
+      - [0x90, 0x48]
+      - [0x91, 0x00]
+      - [0x92, 0x0A]
+      - [0x93, 0x02]
+      - [0x94, 0xDA]
+      - [0x95, 0x04]
+      - [0x96, 0x00]
+      - [0x97, 0x00]
+
+      - [0x98, 0x48]
+      - [0x99, 0x00]
+      - [0x9A, 0x0C]
+      - [0x9B, 0x02]
+      - [0x9C, 0xDC]
+      - [0x9D, 0x04]
+      - [0x9E, 0x00]
+      - [0x9F, 0x00]
+
+      - [0xA0, 0x48]
+      - [0xA1, 0x00]
+      - [0xA2, 0x05]
+      - [0xA3, 0x02]
+      - [0xA4, 0xD5]
+      - [0xA5, 0x04]
+      - [0xA6, 0x00]
+      - [0xA7, 0x00]
+
+      - [0xA8, 0x48]
+      - [0xA9, 0x00]
+      - [0xAA, 0x07]
+      - [0xAB, 0x02]
+      - [0xAC, 0xD7]
+      - [0xAD, 0x04]
+      - [0xAE, 0x00]
+      - [0xAF, 0x00]
+
+      - [0xB0, 0x48]
+      - [0xB1, 0x00]
+      - [0xB2, 0x09]
+      - [0xB3, 0x02]
+      - [0xB4, 0xD9]
+      - [0xB5, 0x04]
+      - [0xB6, 0x00]
+      - [0xB7, 0x00]
+
+      - [0xB8, 0x48]
+      - [0xB9, 0x00]
+      - [0xBA, 0x0B]
+      - [0xBB, 0x02]
+      - [0xBC, 0xDB]
+      - [0xBD, 0x04]
+      - [0xBE, 0x00]
+      - [0xBF, 0x00]
+
+      # -------- Color / final setup --------
+      - [0xC0, 0x10]
+      - [0xC1, 0x47]
+      - [0xC2, 0x56]
+      - [0xC3, 0x65]
+      - [0xC4, 0x74]
+      - [0xC5, 0x88]
+      - [0xC6, 0x99]
+      - [0xC7, 0x01]
+      - [0xC8, 0xBB]
+      - [0xC9, 0xAA]
+
+      - [0xD0, 0x10]
+      - [0xD1, 0x47]
+      - [0xD2, 0x56]
+      - [0xD3, 0x65]
+      - [0xD4, 0x74]
+      - [0xD5, 0x88]
+      - [0xD6, 0x99]
+      - [0xD7, 0x01]
+      - [0xD8, 0xBB]
+      - [0xD9, 0xAA]
+
+      - [0xF3, 0x01]
+      - [0xF0, 0x00]
+
+      # -------- Exit sleep & display on --------
+      - 0x21            # Display inversion ON
+      - 0x11            # Sleep out
+      - delay 120ms
+      - 0x29            # Display ON
+    lambda: |-
+      // 1. Fyll skärmen med svart färg
+      it.fill(Color::BLACK);
+      
+      // 2. Rita din bild i mitten
+      it.image(0, 0, id(success_img));
+      
+      // 3. Skriv en text för att verifiera färgerna
+      it.print(180, 320, id(my_font), Color::WHITE, TextAlign::CENTER, "Display OK!");

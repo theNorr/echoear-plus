@@ -8,8 +8,76 @@ substitutions:
   imageheight: "360"
   rotate_display: "0"
 
+  # --- AVAILABLE SETTINGS: -----------------------------------------------------------------
+  #Home Assistant sensors exposed to this device:
+  sensor1_entity: "binary_sensor.8266_presense_2_presence"
+  light1_entity: "light.livingroom_all_lights"
+  sensor1_label: "Tech Room"
+
+  sensor2_entity: "binary_sensor.esp32s3_1_presence"
+  light2_entity: "group.kitchen_lights"
+  sensor2_label: "Kitchen"
+
+  sensor3_entity: "binary_sensor.esphome_web_1911bf_presence"
+  light3_entity: "light.mom_s_room"
+  sensor3_label: "Living Room"
+
+  sensor4_entity: "binary_sensor.notifier_2_presence"
+  light4_entity: "light.hue_toilet_light_light"
+  sensor4_label: "Toilet"
+
+  sensor5_entity: "binary_sensor.8266_presense_presence"
+  light5_entity: "switch.nedis_smart_plug_tasmota1"
+  sensor5_label: "Hall"
+
+
+  weather_entity: "weather.forecast_home"
+
+  #Other settings:
+  startup_sound: "Home_Connected" # (options are: available, Home_Connected, Home_Connected_Male, Computer_Ready)
+  clock_background_image: "tron" # (options are: clock, hacker, ha-girl, mission, starrysky, waves, tron)
+  imagemodel: "Gwen" # options are:
+  # Alita, Alfred, Astrobot, Buzz, Casita, Cybergirl, Dory, EVE, Eyes, Eyes2, GLaDOS, Girl1, Guy1, Guy2, Gwen, HA-character, ha-girl, Hacker, Harley,
+  # Jarvis, Luffy, Mario, Max, Prime, Robochibi, Robocop, Robot, Robotgirl, Shaun
+
+  # --- END OF AVAILABLE SETTINGS ----------------------------------------------------------
+
+  #colors:
+  loading_illustration_background_color: "000000"
+  idle_illustration_background_color: "000000"
+  listening_illustration_background_color: "000000"
+  thinking_illustration_background_color: "000000"
+  replying_illustration_background_color: "000000"
+  error_illustration_background_color: "000000"
+
+  #fonts and text-related:
+  font_glyphsets: "GF_Latin_Core"
+  font_family: Figtree
+  allowed_characters: >-
+    !#%'()+,-./0123456789:;<>?@ABCDEFGHIJKLMNOPQRSTUVWYZ[]_abcdefghijklmnopqrstuvwxyz{|}°²³µ¿ÁÂÄÅÉÖÚßàáâãäåæçèéêëìíîðñòóôõöøùúûüýþāăąćčďĐđēėęěğĮįıļľŁłńňőřśšťũūůűųźŻżŽžơưșțΆΈΌΐΑΒΓΔΕΖΗΘΚΜΝΠΡΣΤΥΦάέήίαβγδεζηθικλμνξοπρςστυφχψωϊόύώАБВГДЕЖЗИКЛМНОПРСТУХЦЧШЪЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёђєіїјљњћאבגדהוזחטיכלםמןנסעפץצקרשת،ءآأإئابةتجحخدذرزسشصضطظعغفقكلمنهوىيٹپچڈکگںھہیےংকচতধনফবযরলশষস়ািু্చయలిెొ్ംഅആഇഈഉഎഓകഗങചജഞടഡണതദധനപഫബഭമയരറലളവശസഹാിീുൂെേൈ്ൺൻർൽൾაბგდევზთილმნოპრსტუფქყშჩცძჭხạảấầẩậắặẹẽếềểệỉịọỏốồổỗộớờởợụủứừửữựỳ—、一上不个中为主乾了些亮人任低佔何作供依侧係個側偵充光入全关冇冷几切到制前動區卧厅厨及口另右吊后吗启吸呀咗哪唔問啟嗎嘅嘛器圍在场執場外多大始安定客室家密寵对將小少左已帘常幫幾库度庫廊廚廳开式後恆感態成我戲戶户房所扇手打执把拔换掉控插摄整斯新明是景暗更最會有未本模機檯櫃欄次正氏水沒没洗活派温測源溫漏潮激濕灯為無煙照熱燈燥物狀玄现現瓦用發的盞目着睡私空窗立笛管節簾籬紅線红罐置聚聲脚腦腳臥色节著行衣解設調請謝警设调走路車车运連遊運過道邊部都量鎖锁門閂閉開關门闭除隱離電震霧面音頂題顏颜風风食餅餵가간감갔강개거게겨결경고공과관그금급기길깥꺼껐꼽나난내네놀누는능니다닫담대더데도동됐되된됨둡드든등디때떤뜨라래러렇렌려로료른를리림링마많명몇모무문물뭐바밝방배변보부불블빨뽑사산상색서설성세센션소쇼수스습시신실싱아안않알았애야어얼업없었에여연열옆오온완외왼요운움워원위으은을음의이인일임입있작잠장재전절정제져조족종주줄중줘지직진짐쪽차창천최추출충치침커컴켜켰쿠크키탁탄태탬터텔통트튼티파팬퍼폰표퓨플핑한함해했행혀현화활후휴힘，？
+  
+  #Integer used by other things to identify if voice assist is doing something
+  voice_assist_idle_phase_id: "1"
+  voice_assist_listening_phase_id: "2"
+  voice_assist_thinking_phase_id: "3"
+  voice_assist_replying_phase_id: "4"
+  voice_assist_not_ready_phase_id: "10"
+  voice_assist_error_phase_id: "11"
+  voice_assist_timer_finished_phase_id: "20"
+
   #images:
-  success_image_file: "https://raw.githubusercontent.com/RealDeco/xiaozhi-esphome/main/images/Gwen/360x360/replying.png"
+  loading_illustration_file: https://github.com/RealDeco/xiaozhi-esphome/raw/main/images/${imagemodel}/${imagewidth}x${imageheight}/loading.png
+  idle_illustration_file: https://github.com/RealDeco/xiaozhi-esphome/raw/main/images/${imagemodel}/${imagewidth}x${imageheight}/idle.png
+  listening_illustration_file: https://github.com/RealDeco/xiaozhi-esphome/raw/main/images/${imagemodel}/${imagewidth}x${imageheight}/listening.png
+  thinking_illustration_file: https://github.com/RealDeco/xiaozhi-esphome/raw/main/images/${imagemodel}/${imagewidth}x${imageheight}/thinking.png
+  replying_illustration_file: https://github.com/RealDeco/xiaozhi-esphome/raw/main/images/${imagemodel}/${imagewidth}x${imageheight}/replying.png
+  error_illustration_file: https://github.com/RealDeco/xiaozhi-esphome/raw/main/images/${imagemodel}/${imagewidth}x${imageheight}/error.png
+  timer_finished_illustration_file: https://github.com/RealDeco/xiaozhi-esphome/raw/main/images/${imagemodel}/${imagewidth}x${imageheight}/timer_finished.png
+  playing_illustration_file: https://github.com/RealDeco/xiaozhi-esphome/raw/main/images/${imagemodel}/${imagewidth}x${imageheight}/playing.png
+  clock_background_file: https://github.com/RealDeco/xiaozhi-esphome/raw/main/images/Other/${imagewidth}x${imageheight}/${clock_background_image}.png
+
+  #sound:
+  startup_sound_file: https://github.com/RealDeco/xiaozhi-esphome/raw/main/sounds/${startup_sound}.flac
 
 #platform-specific components and configurations:
 esp32:
@@ -25,16 +93,27 @@ esp32:
       CONFIG_ESP32S3_DATA_CACHE_64KB: "y"
       CONFIG_ESP32S3_DATA_CACHE_LINE_64B: "y"
 
-#Details about the FW:
+#Details about the FW and calls to draw display page:
 esphome:
   name: ${name}
   friendly_name: ${friendly_name}
   min_version: 2025.9.0
   name_add_mac_suffix: false                              # Defaults to false, så vet egentligen inte varför den är med. Kanske är något annat i koden som ställer om den annars.
   on_boot:
-    priority: -100                                        # Is needed for the touchpanel, the setup looks alright in the logs when we have this.
-    then:
-      - delay: 500ms
+    - priority: -100
+      then:
+        - output.turn_on: audio_pa_pin
+        - script.execute: draw_display
+    - priority: 600
+      then:
+        - script.execute: draw_display
+        - delay: 30s
+        - if:
+            condition:
+              lambda: return id(init_in_progress);
+            then:
+              - lambda: id(init_in_progress) = false;
+              - script.execute: draw_display
 
 #Available memory and how it's used:      
 psram:
@@ -43,12 +122,17 @@ psram:
 
 #Wifi settings:
 wifi:
-  ssid: !secret wifi_ssid
+  ssid: !secret wifi_ssid_2
   password: !secret wifi_password
   # Enable fallback hotspot (captive portal) in case wifi connection fails:
   ap:
     ssid: "EchoEar-plus"
     password: !secret emo_dot_ap
+  on_connect:
+    - component.update: clock_background
+    - script.execute: draw_display
+  on_disconnect:
+    - script.execute: draw_display
 
 #Update settings:
 ota:
@@ -64,36 +148,1209 @@ http_request:
 
 #Enables logging, and related configuration:
 logger:
-  level: VERY_VERBOSE
-  logs:
-    touchscreen: VERY_VERBOSE
-    cst816: VERY_VERBOSE
-    i2c: DEBUG
-    substitutions: DEBUG
-    esp32: DEBUG
-    esphome: DEBUG
-    psram: DEBUG
-    wifi: DEBUG
-    ota: DEBUG
-    captive_portal: DEBUG
-    http_request: DEBUG
-    api: DEBUG
-    output: DEBUG
-    light: DEBUG
-    image: DEBUG
-    font: DEBUG
-    spi: DEBUG
-    display: DEBUG
+  level: DEBUG
 
 #Home Assistant and ioBroker use this native API:
 api:
   encryption:
     key: !secret emo_dot_ha_encr_key
+  on_client_connected:
+    - script.execute: draw_display
+    - lambda: |-
+        if (!id(boot_sound_played)) {
+          id(boot_sound_played) = true;
+          if (id(startup_sound_switch).state) {
+            id(play_sound)->execute(true, id(ready_sound));
+          }
+        }
+    - script.execute: reset_screensaver
+  on_client_disconnected:
+    - script.execute: draw_display
+
+  actions:
+    - action: show_fullscreen_image
+      variables:
+        url: string
+      then:
+        - if:
+            condition:
+              lambda: |-
+                return id(voice_assistant_phase) == ${voice_assist_idle_phase_id}
+                    || id(voice_assistant_phase) == ${voice_assist_replying_phase_id};
+            then:
+              - lambda: id(showing_fullscreen_image) = true;
+              - online_image.set_url:
+                  id: temp_fullscreen
+                  url: !lambda 'return url;'
+                  update: true
+              - delay: 600ms
+              - display.page.show: empty_clock
+              - component.update: main_display
+              - script.execute: reset_screensaver
+              - delay: !lambda |-
+                  int s = (int) id(api_image_duration_seconds).state;
+                  if (s <= 0) s = 30;
+                  return (uint32_t)(s * 1000);
+              - online_image.release: temp_fullscreen
+              - lambda: id(showing_fullscreen_image) = false;
+              - script.execute: draw_display
+            else:
+              - logger.log:
+                  level: INFO
+                  format: "show_fullscreen_image ignored (phase=%d)"
+                  args: [ 'id(voice_assistant_phase)' ]
 
 #There don’t seem to be any touch pads. I’ve tested both GPIO7, which according to the schematic is IO7 Touch and according to the firmware is TOUCH_PAD1, and GPIO6, which according to the schematic is IO6/Battery level and according to the firmware is TOUCH_PAD2_2. I also can’t find anything physically on the board that confirms the presence of touch pads:
 #esp32_touch:
 #  setup_mode: true
 
+# --- VARIABLES AND SUCH -------------------------------------------
+number:
+  - platform: template
+    id: clock_delay_seconds
+    name: "Clock Screensaver Delay"
+    unit_of_measurement: "s"
+    icon: "mdi:timer-outline"
+    entity_category: config
+    optimistic: true
+    restore_value: true
+    mode: box
+    min_value: 5
+    max_value: 600
+    step: 5
+    initial_value: 10
+
+  - platform: template
+    id: api_image_duration_seconds
+    name: "API Image Display Time"
+    unit_of_measurement: "s"
+    icon: "mdi:timer-sand"
+    entity_category: config
+    optimistic: true
+    restore_value: true
+    mode: box
+    min_value: 1
+    max_value: 600
+    step: 1
+    initial_value: 30
+
+globals:
+  # this is used by the script clock_enabled and by the select clock_style:
+  - id: show_clock
+    type: bool
+    restore_value: no
+    initial_value: "false"
+
+  #Related to the touch panel:
+  - id: gs_touch_active
+    type: bool
+    restore_value: no
+    initial_value: "false"
+  - id: gs_start_x
+    type: int
+    restore_value: no
+    initial_value: "0"
+  - id: gs_start_y
+    type: int
+    restore_value: no
+    initial_value: "0"
+  - id: gs_last_x
+    type: int
+    restore_value: no
+    initial_value: "0"
+  - id: gs_last_y
+    type: int
+    restore_value: no
+    initial_value: "0"
+  - id: gs_start_ms
+    type: uint32_t
+    restore_value: no
+    initial_value: "0"
+
+  #Used by voice assistant and media player:
+  - id: playing_internal_sound
+    type: bool
+    restore_value: no
+    initial_value: "false"
+
+  #Used by battery sensors:
+  - id: last_battery_percent
+    type: int
+    restore_value: no
+    initial_value: "-1"
+  
+  #Used under API:
+  - id: voice_assistant_phase
+    type: int
+    restore_value: false
+    initial_value: ${voice_assist_not_ready_phase_id}
+
+  #Used under Intervals and in script draw_display:
+  - id: showing_fullscreen_image
+    type: bool
+    restore_value: no
+    initial_value: "false"
+
+  #Used in esphome, by draw_display in scripts, by wake_word_engine_location in select and by on_error and on_client_connected in voice_assistant:
+  - id: init_in_progress
+    type: bool
+    restore_value: false
+    initial_value: "true"
+
+  #Related to timers:
+  - id: global_first_active_timer
+    type: voice_assistant::Timer
+    restore_value: false
+
+  - id: global_is_timer_active
+    type: bool
+    restore_value: false
+
+  - id: global_first_timer
+    type: voice_assistant::Timer
+    restore_value: false
+
+  - id: global_is_timer
+    type: bool
+    restore_value: false
+  
+  #Used in api during startup:
+  - id: boot_sound_played
+    type: bool
+    restore_value: no
+    initial_value: "false"
+
+  #Used by interval, in script by reset_screensaver and by the switch clock_enabled:
+  - id: idle_seconds
+    type: int
+    restore_value: no
+    initial_value: "0"
+
+# --- SENSORS -----------------------------------------------------
+binary_sensor:
+  #Related to timer:
+  - platform: template
+    name: "Timer Ringing Active"
+    id: timer_ringing_active
+    device_class: sound
+    lambda: |-
+      return id(timer_ringing).state;
+
+  #Related to the touch function on_release (se at the bottom)
+  - platform: template
+    name: "Touch Button"
+    id: touch_input
+    on_click:
+      min_length: 30ms
+      max_length: 600ms
+      then:
+        if:
+          condition:
+            switch.is_on: timer_ringing
+          then:
+            - switch.turn_off: timer_ringing
+          else:
+            - if:
+                condition:
+                  lambda: return id(wake_word_engine_location).state == "On device";
+                then:
+                  - media_player.stop:
+                      id: external_media_player
+                  - if:
+                      condition:
+                        not:
+                          voice_assistant.is_running:
+                      then:
+                        - voice_assistant.start:
+                      else:
+                        - voice_assistant.stop:
+
+  - platform: template
+    id: swipe_left
+    name: "Swipe Left"
+    device_class: moving
+    entity_category: diagnostic
+
+  - platform: template
+    id: swipe_right
+    name: "Swipe Right"
+    device_class: moving
+    entity_category: diagnostic
+    
+  - platform: template
+    id: swipe_up
+    name: "Swipe Up"
+    device_class: moving
+    entity_category: diagnostic
+    
+  - platform: template
+    id: swipe_down
+    name: "Swipe Down"
+    device_class: moving
+    entity_category: diagnostic
+
+  #Home Assistant binary sensors exposed to this device:
+  - platform: homeassistant
+    id: ha_sensor1
+    entity_id: ${sensor1_entity}
+    internal: true
+  - platform: homeassistant
+    id: ha_sensor2
+    entity_id: ${sensor2_entity}
+    internal: true
+  - platform: homeassistant
+    id: ha_sensor3
+    entity_id: ${sensor3_entity}
+    internal: true
+  - platform: homeassistant
+    id: ha_sensor4
+    entity_id: ${sensor4_entity}
+    internal: true
+  - platform: homeassistant
+    id: ha_sensor5
+    entity_id: ${sensor5_entity}
+    internal: true
+
+  - platform: homeassistant
+    id: ha_light1
+    entity_id: ${light1_entity}
+    internal: true
+  - platform: homeassistant
+    id: ha_light2
+    entity_id: ${light2_entity}
+    internal: true
+  - platform: homeassistant
+    id: ha_light3
+    entity_id: ${light3_entity}
+    internal: true
+  - platform: homeassistant
+    id: ha_light4
+    entity_id: ${light4_entity}
+    internal: true
+  - platform: homeassistant
+    id: ha_light5
+    entity_id: ${light5_entity}
+    internal: true
+
+sensor:
+  # --- Battery level measurements -----------------------------------
+  # Measures voltage, which changes in relation to the SoC:
+  - platform: adc
+    pin: 6
+    id: battery_voltage
+    name: "Battery Voltage"
+    update_interval: 30s
+    attenuation: 12db
+    unit_of_measurement: "V"
+    accuracy_decimals: 2
+    device_class: voltage
+    state_class: measurement
+    filters:
+      - multiply: 2.0
+    on_value:
+      then:
+        - sensor.template.publish:
+            id: battery_percentage
+            state: !lambda 'return x;'
+
+  # Defines battery level in percentages, in accordance to different voltage levels:
+  - platform: template
+    id: battery_percentage
+    name: "Battery Percentage"
+    update_interval: never
+    unit_of_measurement: "%"
+    accuracy_decimals: 0
+    icon: mdi:battery-medium
+    filters:
+      - calibrate_linear:
+          method: exact
+          datapoints:
+            - 2.80 -> 0.0
+            - 3.10 -> 10.0
+            - 3.30 -> 20.0
+            - 3.45 -> 30.0
+            - 3.60 -> 40.0
+            - 3.70 -> 50.0
+            - 3.75 -> 60.0
+            - 3.80 -> 70.0
+            - 3.90 -> 80.0
+            - 4.00 -> 90.0
+            - 4.20 -> 100.0
+      - lambda: |-
+          if (x > 100) return 100;
+          if (x < 0) return 0;
+          return x;
+    on_value:
+      then:
+        - lambda: |-
+            int current = (int) x;
+            if (current == id(last_battery_percent)) return;
+            id(last_battery_percent) = current;
+        - if:
+            condition:
+              switch.is_on: show_battery_status
+            then:
+              - component.update: main_display
+
+  #Home Assistant sensors exposed to this device:
+  - platform: homeassistant
+    id: ha_weather_temperature
+    entity_id: ${weather_entity}
+    attribute: temperature
+    internal: true
+  - platform: homeassistant
+    id: ha_weather_cloud_coverage
+    entity_id: ${weather_entity}
+    attribute: cloud_coverage
+    internal: true
+  - platform: homeassistant
+    id: ha_weather_uv_index
+    entity_id: ${weather_entity}
+    attribute: uv_index
+    internal: true
+  - platform: homeassistant
+    id: ha_weather_wind_speed
+    entity_id: ${weather_entity}
+    attribute: wind_speed
+    internal: true
+  - platform: homeassistant
+    id: ha_weather_wind_gust
+    entity_id: ${weather_entity}
+    attribute: wind_gust_speed
+    internal: true
+  - platform: homeassistant
+    id: ha_weather_humidity
+    entity_id: ${weather_entity}
+    attribute: humidity
+    internal: true
+  - platform: homeassistant
+    id: ha_weather_pressure
+    entity_id: ${weather_entity}
+    attribute: pressure
+    internal: true
+
+text_sensor:
+  #Used by voice assistant and pages:
+  - id: text_request
+    platform: template
+    on_value:
+      lambda: |-
+        if(id(text_request).state.length()>30) {
+          std::string name = id(text_request).state.c_str();
+          std::string truncated = esphome::str_truncate(name.c_str(),31);
+          id(text_request).state = (truncated+"...").c_str();
+        }
+
+  - id: text_response
+    platform: template
+    on_value:
+      lambda: |-
+        if(id(text_response).state.length()>30) {
+          std::string name = id(text_response).state.c_str();
+          std::string truncated = esphome::str_truncate(name.c_str(),31);
+          id(text_response).state = (truncated+"...").c_str();
+        }
+
+  - id: text_request_full
+    platform: template
+    name: "Text Request"
+    on_value:
+      lambda: |-
+        if (id(text_request_full).state.length() > 250) {
+          std::string s = id(text_request_full).state.c_str();
+          std::string truncated = esphome::str_truncate(s.c_str(), 250);
+          id(text_request_full).state = truncated.c_str();
+        }
+
+  - id: text_response_full
+    platform: template
+    name: "Text Response"
+    on_value:
+      lambda: |-
+        if (id(text_response_full).state.length() > 250) {
+          std::string s = id(text_response_full).state.c_str();
+          std::string truncated = esphome::str_truncate(s.c_str(), 250);
+          id(text_response_full).state = truncated.c_str();
+        }
+
+  # Home assistant weather sensors exposed to this device:
+  - platform: homeassistant
+    id: ha_weather_temperature_unit
+    entity_id: ${weather_entity}
+    attribute: temperature_unit
+    internal: true
+
+  - platform: homeassistant
+    id: ha_weather_wind_speed_unit
+    entity_id: ${weather_entity}
+    attribute: wind_speed_unit
+    internal: true
+
+  - platform: homeassistant
+    id: ha_weather_pressure_unit
+    entity_id: ${weather_entity}
+    attribute: pressure_unit
+    internal: true
+
+time:
+  - platform: homeassistant
+    id: homeassistant_time
+
+# --- SWITCHES & BUTTONS ----------------------------------------------------
+switch:
+  #Related to touch panel and its functions:
+  - platform: template
+    id: swipe_local
+    name: "Handle swipes on device"
+    icon: "mdi:gesture-swipe"
+    entity_category: config
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_ON
+
+  #Related to the clock screensaver:
+  - platform: template
+    id: clock_enabled
+    name: "Clock Screensaver"
+    icon: "mdi:clock-outline"
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_ON
+    entity_category: config
+    on_turn_off:
+      - lambda: |-
+          if (id(show_clock)) id(show_clock) = false;
+          id(idle_seconds) = 0;
+      - display.page.show: idle_page
+      - component.update: main_display
+
+  #Switch to use for turning light on or off. Don't know if such a led exists tho. Needs to be investigadet further:
+  #- platform: gpio
+  #  name: "Top Green LED"
+  #  id: top_green_led
+  #  pin:
+  #    number: GPIO43
+  #    inverted: true
+
+  - platform: template
+    id: timer_ringing
+    optimistic: true
+    internal: true
+    restore_mode: ALWAYS_OFF
+    on_turn_off:
+      - lambda: |-
+          id(external_media_player)
+            ->make_call()
+            .set_command(media_player::MediaPlayerCommand::MEDIA_PLAYER_COMMAND_REPEAT_OFF)
+            .set_announcement(true)
+            .perform();
+          id(external_media_player)->set_playlist_delay_ms(speaker::AudioPipelineType::ANNOUNCEMENT, 0);
+      - media_player.stop:
+          announcement: true
+    on_turn_on:
+      - lambda: |-
+          id(external_media_player)
+            ->make_call()
+            .set_command(media_player::MediaPlayerCommand::MEDIA_PLAYER_COMMAND_REPEAT_ONE)
+            .set_announcement(true)
+            .perform();
+          id(external_media_player)->set_playlist_delay_ms(speaker::AudioPipelineType::ANNOUNCEMENT, 1000);
+      - media_player.speaker.play_on_device_media_file:
+          media_file: timer_finished_sound
+          announcement: true
+      - delay: 15min
+      - switch.turn_off: timer_ringing
+
+  - platform: template
+    id: wake_sound
+    name: Wake sound
+    icon: "mdi:bullhorn"
+    entity_category: config
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_ON
+
+  - platform: template
+    id: startup_sound_switch
+    name: Startup sound
+    icon: "mdi:card-text-outline"
+    entity_category: config
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_ON
+
+  - platform: template
+    id: show_text
+    name: Show Text
+    icon: "mdi:card-text-outline"
+    entity_category: config
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_ON
+
+  - platform: template
+    id: show_battery_status
+    name: Show Battery Status
+    icon: "mdi:card-text-outline"
+    entity_category: config
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_ON
+    on_turn_on:
+      - script.execute: draw_display
+    on_turn_off:
+      - script.execute: draw_display
+
+  - platform: template
+    id: clock_24h
+    name: "Clock 24h Format"
+    icon: "mdi:clock-time-four-outline"
+    entity_category: config
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_ON
+
+  - platform: template
+    id: clock_show_time
+    name: "Clock Show Time"
+    icon: "mdi:clock-digital"
+    entity_category: config
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_ON
+
+  - platform: template
+    id: clock_show_seconds
+    name: "Clock Show Seconds"
+    icon: "mdi:timer-outline"
+    entity_category: config
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_ON
+
+  - platform: template
+    id: clock_show_date
+    name: "Clock Show Date"
+    icon: "mdi:calendar"
+    entity_category: config
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_ON
+
+  - platform: template
+    id: clock_show_dots
+    name: "Clock Show Dots"
+    icon: "mdi:dots-circle"
+    entity_category: config
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_ON
+
+  - platform: template
+    id: clock_show_wallpaper
+    name: "Clock Show Wallpaper"
+    icon: "mdi:image"
+    entity_category: config
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_ON
+
+button:
+  - platform: template
+    name: "Virtual Touch"
+    id: virtual_touch
+    on_press:
+      - script.execute: handle_screen_tap
+
+# --- SCRIPTS, AUTOMATIONS AND INTERVALS -----------------------------------------------------
+script:
+  # the mechanics that actually creates/publishes the pages on the display:
+  - id: draw_display
+    then:
+      - if:
+          condition:
+            lambda: return !id(init_in_progress);
+          then:
+            - if:
+                condition:
+                  wifi.connected:
+                then:
+                  - if:
+                      condition:
+                        api.connected:
+                      then:
+                        - lambda: |-
+                            if (id(showing_fullscreen_image)
+                                && id(voice_assistant_phase) == ${voice_assist_idle_phase_id}) {
+                              id(main_display).show_page(empty_clock);
+                              id(main_display).update();
+                              return;
+                            }
+                            if (id(voice_assistant_phase) == ${voice_assist_idle_phase_id}
+                                && id(show_clock)
+                                && id(clock_enabled).state) {
+                              id(show_clock_page).execute();
+                              return;
+                            }
+                            switch(id(voice_assistant_phase)) {
+                              case ${voice_assist_listening_phase_id}:
+                                id(main_display).show_page(listening_page);
+                                break;
+                              case ${voice_assist_thinking_phase_id}:
+                                id(main_display).show_page(thinking_page);
+                                break;
+                              case ${voice_assist_replying_phase_id}:
+                                id(main_display).show_page(replying_page);
+                                break;
+                              case ${voice_assist_error_phase_id}:
+                                id(main_display).show_page(error_page);
+                                break;
+                              case ${voice_assist_not_ready_phase_id}:
+                                id(main_display).show_page(no_ha_page);
+                                break;
+                              case ${voice_assist_timer_finished_phase_id}:
+                                id(main_display).show_page(timer_finished_page);
+                                break;
+                              default:
+                                id(main_display).show_page(idle_page);
+                                break;
+                            }
+                            id(main_display).update();
+                      else:
+                        - display.page.show: no_ha_page
+                        - component.update: main_display
+                else:
+                  - display.page.show: no_wifi_page
+                  - component.update: main_display
+          else:
+            - display.page.show: initializing_page
+            - component.update: main_display
+  
+  #Does what it says:
+  - id: reset_screensaver
+    then:
+      - lambda: |-
+          id(show_clock) = false;
+          id(idle_seconds) = 0;
+
+  # --- Related to clock and the style of clock: -------------------------------------------
+  - id: show_clock_page
+    then:
+      - lambda: |-
+          const std::string sel = id(clock_style).state;
+          if (sel == "Default") {
+            id(main_display).show_page(default_clock);
+          } else if (sel == "Flip") {
+            id(main_display).show_page(flip_clock);
+          } else if (sel == "Presence") {
+            id(main_display).show_page(presence_sensor_clock);
+          } else if (sel == "Weather") {
+            id(main_display).show_page(weather_clock);
+          } else if (sel == "Small") {
+            id(main_display).show_page(small_clock);
+          } else if (sel == "Analog") {
+            id(main_display).show_page(analog_clock);
+          } else {
+            id(main_display).show_page(clock_7segment);
+          }
+          id(main_display).update();
+
+  # --- Related to touch panel, its functions and display of clock pages, etc: --------------------------
+  - id: swipe_left_action   # next clock style
+    then:
+      - lambda: |-
+          static const char* const opts[] = {
+            "7-segment","Flip","Default","Presence","Weather","Small","Analog"
+          };
+          const int N = sizeof(opts)/sizeof(opts[0]);
+          std::string cur = id(clock_style).state.c_str();
+          int idx = 0;
+          for (int i = 0; i < N; i++) if (cur == opts[i]) { idx = i; break; }
+          int next = (idx + 1) % N;
+          id(clock_style).publish_state(opts[next]);
+      - script.execute: show_clock_page
+
+  - id: swipe_right_action  # previous clock style
+    then:
+      - lambda: |-
+          static const char* const opts[] = {
+            "7-segment","Flip","Default","Presence","Weather","Small","Analog"
+          };
+          const int N = sizeof(opts)/sizeof(opts[0]);
+          std::string cur = id(clock_style).state.c_str();
+          int idx = 0;
+          for (int i = 0; i < N; i++) if (cur == opts[i]) { idx = i; break; }
+          int prev = (idx - 1 + N) % N;
+          id(clock_style).publish_state(opts[prev]);
+      - script.execute: show_clock_page
+
+  - id: swipe_up_action     # next wallpaper (cycle)
+    then:
+      - lambda: |-
+          static const char* const opts[] = { "clock","hacker","ha-girl","mission","Rolex","starrysky","waves","tron" };
+          const int N = sizeof(opts)/sizeof(opts[0]);
+          std::string cur = id(clock_wallpaper_image).state.c_str();
+          int idx = 0;
+          for (int i = 0; i < N; i++) if (cur == opts[i]) { idx = i; break; }
+          int next = (idx + 1) % N;
+          id(clock_wallpaper_image).publish_state(opts[next]);
+      - script.execute: draw_display
+
+  - id: swipe_down_action   # toggle battery widget
+    then:
+      - switch.toggle: show_battery_status
+      - script.execute: draw_display
+
+  - id: pulse_swipe_left
+    mode: restart
+    then:
+      - binary_sensor.template.publish: { id: swipe_left,  state: ON }
+      - delay: 150ms
+      - binary_sensor.template.publish: { id: swipe_left,  state: OFF }
+
+  - id: pulse_swipe_right
+    mode: restart
+    then:
+      - binary_sensor.template.publish: { id: swipe_right, state: ON }
+      - delay: 150ms
+      - binary_sensor.template.publish: { id: swipe_right, state: OFF }
+
+  - id: pulse_swipe_up
+    mode: restart
+    then:
+      - binary_sensor.template.publish: { id: swipe_up,    state: ON }
+      - delay: 150ms
+      - binary_sensor.template.publish: { id: swipe_up,    state: OFF }
+
+  - id: pulse_swipe_down
+    mode: restart
+    then:
+      - binary_sensor.template.publish: { id: swipe_down,  state: ON }
+      - delay: 150ms
+      - binary_sensor.template.publish: { id: swipe_down,  state: OFF }
+
+  - id: pulse_touch_input
+    then:
+      - binary_sensor.template.publish: { id: touch_input, state: ON }
+      - delay: 150ms
+      - binary_sensor.template.publish: { id: touch_input, state: OFF }
+  
+  #Called when button virtual_touch is pressed:
+  - id: handle_screen_tap
+    then:
+      - script.execute: reset_screensaver
+      - if:
+          condition:
+            switch.is_on: timer_ringing
+          then:
+            - switch.turn_off: timer_ringing
+          else:
+            - if:
+                condition:
+                  lambda: return id(wake_word_engine_location).state == "On device";
+                then:
+                  - if:
+                      condition:
+                        not:
+                          voice_assistant.is_running:
+                      then:
+                        - voice_assistant.start:
+                      else:
+                        - voice_assistant.stop:
+      - display.page.show: idle_page
+      - component.update: main_display
+  
+  # --- Plays sound ---------------------
+  - id: play_sound
+    parameters:
+      priority: bool
+      sound_file: "audio::AudioFile*"
+    then:
+      - lambda: |-
+          id(playing_internal_sound) = true;
+          if (priority) {
+            id(external_media_player)
+              ->make_call()
+              .set_command(media_player::MediaPlayerCommand::MEDIA_PLAYER_COMMAND_STOP)
+              .set_announcement(true)
+              .perform();
+          }
+          if ((id(external_media_player).state != media_player::MediaPlayerState::MEDIA_PLAYER_STATE_ANNOUNCING) || priority) {
+            id(external_media_player)->play_file(sound_file, true, false);
+          }
+  
+  # Related to the wake words:
+  - id: start_wake_word
+    then:
+      - if:
+          condition:
+            and:
+              - not:
+                  voice_assistant.is_running:
+              - not:
+                  speaker.is_playing:
+                    id: box_speaker
+              - lambda: return id(wake_word_engine_location).state == "On device";
+          then:
+            - lambda: id(va).set_use_wake_word(false);
+            - micro_wake_word.start:
+      - if:
+          condition:
+            and:
+              - not:
+                  voice_assistant.is_running:
+              - lambda: return id(wake_word_engine_location).state == "In Home Assistant";
+          then:
+            - lambda: id(va).set_use_wake_word(true);
+            - voice_assistant.start_continuous:
+
+  - id: stop_wake_word
+    then:
+      - if:
+          condition:
+            lambda: return id(wake_word_engine_location).state == "In Home Assistant";
+          then:
+            - lambda: id(va).set_use_wake_word(false);
+            - voice_assistant.stop:
+      - if:
+          condition:
+            lambda: return id(wake_word_engine_location).state == "On device";
+          then:
+            - micro_wake_word.stop:
+
+  # Related to timers:
+  - id: fetch_first_active_timer
+    then:
+      - lambda: |
+          const auto timers = id(va).get_timers();
+          auto output_timer = timers.begin()->second;
+          for (auto &iterable_timer : timers) {
+            if (iterable_timer.second.is_active && iterable_timer.second.seconds_left <= output_timer.seconds_left) {
+              output_timer = iterable_timer.second;
+            }
+          }
+          id(global_first_active_timer) = output_timer;
+
+  - id: check_if_timers_active
+    then:
+      - lambda: |
+          const auto timers = id(va).get_timers();
+          bool output = false;
+          if (timers.size() > 0) {
+            for (auto &iterable_timer : timers) {
+              if (iterable_timer.second.is_active) output = true;
+            }
+          }
+          id(global_is_timer_active) = output;
+
+  - id: fetch_first_timer
+    then:
+      - lambda: |
+          const auto timers = id(va).get_timers();
+          auto output_timer = timers.begin()->second;
+          for (auto &iterable_timer : timers) {
+            if (iterable_timer.second.seconds_left <= output_timer.seconds_left) {
+              output_timer = iterable_timer.second;
+            }
+          }
+          id(global_first_timer) = output_timer;
+
+  - id: check_if_timers
+    then:
+      - lambda: |
+          const auto timers = id(va).get_timers();
+          id(global_is_timer) = (timers.size() > 0);
+
+  - id: draw_timer_timeline
+    then:
+      - lambda: |-
+          const int W = id(main_display).get_width();
+          const int H = id(main_display).get_height();
+          const bool SMALL = (W <= 128 && H <= 64);
+
+          // refresh timer state
+          id(check_if_timers_active).execute();
+          id(check_if_timers).execute();
+          if (!id(global_is_timer_active) && !id(global_is_timer)) return;
+
+          if (SMALL) {
+            // ---------- compact UI for tiny screens (monochrome safe) ----------
+            const int pad    = 6;
+            const int bar_h  = 6;
+            const int bar_w  = W - (pad * 2);
+            const int x      = pad;
+            const int y      = H - bar_h - pad;
+
+            uint32_t total = 0, left = 0;
+            if (id(global_is_timer_active)) {
+              id(fetch_first_active_timer).execute();
+              total = std::max(id(global_first_active_timer).total_seconds, (uint32_t)1);
+              left  = id(global_first_active_timer).seconds_left;
+            } else {
+              id(fetch_first_timer).execute();
+              total = std::max(id(global_first_timer).total_seconds, (uint32_t)1);
+              left  = id(global_first_timer).seconds_left;
+            }
+
+            // label "m:ss" if >=60s, else "ss"
+            char label[16];
+            if (left >= 60) {
+              unsigned long mm = left / 60;
+              unsigned long ss = left % 60;
+              snprintf(label, sizeof(label), "%lu:%02lu", mm, ss);
+            } else {
+              snprintf(label, sizeof(label), "%lus", (unsigned long) left);
+            }
+
+            // centered box (clear interior first)
+            const int box_w = 78;
+            const int box_h = 26;
+            const int box_x = (W - box_w) / 2;
+            const int box_y = (H - box_h) / 2 - 2;
+
+            id(main_display).filled_rectangle(box_x + 1, box_y + 1, box_w - 2, box_h - 2, Color::BLACK);
+            id(main_display).rectangle(box_x, box_y, box_w, box_h, Color::WHITE);
+            id(main_display).printf(W/2, box_y + box_h/2, id(font_big_date), Color::WHITE,
+                                    TextAlign::CENTER, "%s", label);
+
+            // progress bar (outline, clear interior, then fill progress)
+            id(main_display).rectangle(x, y, bar_w, bar_h, Color::WHITE);
+            const int in_w = bar_w - 2;
+            const int in_h = bar_h - 2;
+            id(main_display).filled_rectangle(x + 1, y + 1, in_w, in_h, Color::BLACK);
+
+            int filled_px = (int) lroundf(in_w * (float) left / (float) total);
+            if (filled_px > 0) {
+              id(main_display).filled_rectangle(x + 1, y + 1, filled_px, in_h, Color::WHITE);
+            }
+            return;  // small-screen path done
+          }
+
+          // ---------- original timeline for larger panels (unchanged) ----------
+          const int padding = 20;
+          const int bar_h   = 15;
+          const int bar_w   = W - (padding * 2);
+          const int x       = (W - bar_w) / 2;
+          const int y       = H - (bar_h + 15);
+          const int fill_h  = bar_h - 2;
+
+          if (id(global_is_timer_active)) {
+            id(fetch_first_active_timer).execute();
+            int filled = round(
+              bar_w * id(global_first_active_timer).seconds_left
+              / std::max(id(global_first_active_timer).total_seconds, (uint32_t)1)
+            );
+            id(main_display).filled_rectangle(x, y, bar_w, bar_h, Color::WHITE);
+            if (filled > 0) {
+              id(main_display).filled_rectangle(x, y + 1, filled, fill_h, id(active_timer_color));
+            }
+          } else if (id(global_is_timer)) {
+            id(fetch_first_timer).execute();
+            int filled = round(
+              bar_w * id(global_first_timer).seconds_left
+              / std::max(id(global_first_timer).total_seconds, (uint32_t)1)
+            );
+            id(main_display).filled_rectangle(x, y, bar_w, bar_h, Color::WHITE);
+            if (filled > 0) {
+              id(main_display).filled_rectangle(x, y + 1, filled, fill_h, id(paused_timer_color));
+            }
+          }
+
+  - id: draw_active_timer_widget
+    then:
+      - lambda: |-
+          // Skip the circular widget on tiny screens; keep for larger panels
+          const int W = id(main_display).get_width();
+          const int H = id(main_display).get_height();
+          if (W <= 128 && H <= 64) return;
+
+          id(check_if_timers_active).execute();
+          if (!id(global_is_timer_active)) return;
+
+          // --- original circular widget (unchanged) ---
+          const int cx = W / 2;
+          const int cy = H / 2;
+
+          const int S = std::min(W, H);
+          const int R_SEC = (int)(S * 0.30f);
+          const int L_SEC = std::max(5, S / 28);
+          const int TH_SEC = 2;
+
+          const int GAP   = std::max(6, S / 60);
+          const int R_MIN = R_SEC - L_SEC - GAP;
+          const int L_MIN = std::max(4, L_SEC - 3);
+          const int TH_MIN = 2;
+
+          const Color GREY(60, 60, 60);
+          const Color SEC_COL = id(paused_timer_color); // blue
+          const Color MIN_COL(255, 64, 64);             // red
+
+          id(fetch_first_active_timer).execute();
+          uint32_t left  = id(global_first_active_timer).seconds_left;
+          int hours_left   = left / 3600;
+          int minutes_left = (left / 60) % 60;
+          int seconds_left = left % 60;
+
+          int sec_active = seconds_left;
+          if ((minutes_left + hours_left) > 0 && seconds_left == 0) sec_active = 60;
+
+          int min_active = minutes_left;
+          if (hours_left > 0 && minutes_left == 0) min_active = 60;
+
+          auto draw_tick = [&](float angle, int r_end, int len, Color col, int thick) {
+            const float ca = cosf(angle), sa = sinf(angle);
+            const int x1 = cx + (int)((r_end - len) * ca);
+            const int y1 = cy + (int)((r_end - len) * sa);
+            const int x2 = cx + (int)(r_end * ca);
+            const int y2 = cy + (int)(r_end * sa);
+
+            if (thick <= 1) {
+              id(main_display).line(x1, y1, x2, y2, col);
+              return;
+            }
+            const float px = -sa, py = ca;
+            for (int t = -thick/2; t <= thick/2; ++t) {
+              int ox = (int) lroundf(px * t);
+              int oy = (int) lroundf(py * t);
+              id(main_display).line(x1 + ox, y1 + oy, x2 + ox, y2 + oy, col);
+            }
+          };
+
+          const float TWO_PI = 6.2831853f;
+          for (int i = 0; i < 60; ++i) {
+            float a = -3.1415926f/2 + (i / 60.0f) * TWO_PI;
+            draw_tick(a, R_SEC, L_SEC, (i < sec_active) ? SEC_COL : GREY, TH_SEC);
+          }
+
+          if (left >= 60) {
+            for (int i = 0; i < 60; ++i) {
+              float a = -3.1415926f/2 + (i / 60.0f) * TWO_PI;
+              draw_tick(a, R_MIN, L_MIN, (i < min_active) ? MIN_COL : GREY, TH_MIN);
+            }
+          }
+
+          char s_buf[8];
+          snprintf(s_buf, sizeof(s_buf), "%02d", seconds_left);
+          id(main_display).printf(cx, cy + 2, id(font_big_clock_mono), Color::WHITE,
+                                  TextAlign::CENTER, "%s", s_buf);
+
+          if (left >= 60) {
+            int total_minutes = left / 60;
+            char m_buf[12];
+            snprintf(m_buf, sizeof(m_buf), "%d", total_minutes);
+            const int TEXT_PAD = std::max(16, S / 14);
+            int y_min = cy - (L_SEC + TEXT_PAD);
+            id(main_display).printf(cx, y_min, id(font_big_clock_mono), Color::WHITE,
+                                    TextAlign::CENTER, "%s", m_buf);
+          }
+
+select:
+  #Choice of clock styles:
+  - platform: template
+    entity_category: config
+    name: "Clock Style"
+    id: clock_style
+    icon: "mdi:clock-digital"
+    optimistic: true
+    restore_value: true
+    options:
+      - 7-segment
+      - Flip
+      - Default
+      - Presence
+      - Weather
+      - Small
+      - Analog
+    initial_option: Default
+    on_value:
+      - if:
+          condition:
+            lambda: return id(show_clock);
+          then:
+            - script.execute: show_clock_page
+  
+  #Clock wallpaper:
+  - platform: template
+    entity_category: config
+    name: "Clock Wallpaper (Online)"
+    id: clock_wallpaper_image
+    icon: "mdi:image"
+    optimistic: true
+    restore_value: true
+    options:
+      - clock
+      - hacker
+      - ha-girl
+      - mission
+      - Rolex
+      - starrysky
+      - waves
+      - tron
+    initial_option: ${clock_background_image}
+    on_value:
+      - online_image.set_url:
+          id: clock_background
+          url: !lambda |-
+            std::string base = "https://github.com/RealDeco/xiaozhi-esphome/raw/main/images/Other/"
+                               "${imagewidth}x${imageheight}/";
+            return base + std::string(x) + ".png";
+          update: true
+      - script.execute: draw_display
+
+  #Related to wake word:
+  - platform: template
+    entity_category: config
+    name: Wake word engine location
+    id: wake_word_engine_location
+    icon: "mdi:account-voice"
+    optimistic: true
+    restore_value: true
+    options:
+      - In Home Assistant
+      - On device
+    initial_option: On device
+    on_value:
+      - if:
+          condition:
+            lambda: return !id(init_in_progress);
+          then:
+            - wait_until:
+                lambda: return id(voice_assistant_phase) == ${voice_assist_idle_phase_id};
+            - if:
+                condition:
+                  lambda: return x == "In Home Assistant";
+                then:
+                  - micro_wake_word.stop
+                  - delay: 500ms
+                  - lambda: id(va).set_use_wake_word(true);
+                  - voice_assistant.start_continuous:
+            - if:
+                condition:
+                  lambda: return x == "On device";
+                then:
+                  - lambda: id(va).set_use_wake_word(false);
+                  - voice_assistant.stop
+                  - delay: 500ms
+                  - micro_wake_word.start
+
+interval:
+  - interval: 1s
+    then:
+      - lambda: |-
+          const bool idle_phase   = (id(voice_assistant_phase) == ${voice_assist_idle_phase_id});
+          const bool clock_ok     = id(clock_enabled).state;
+          const bool not_fullscreen   = !id(showing_fullscreen_image);
+
+          id(check_if_timers_active).execute();
+          const bool has_active_timer = id(global_is_timer_active);
+
+          if (idle_phase && clock_ok && not_fullscreen && !has_active_timer) {
+            id(idle_seconds)++;
+            int delay_s = (int) id(clock_delay_seconds).state;
+            if (delay_s <= 0) delay_s = 30;
+            if (id(idle_seconds) >= delay_s && !id(show_clock)) {
+              id(show_clock) = true;
+              id(show_clock_page).execute();
+            }
+          } else {
+            if (id(show_clock)) id(show_clock) = false;
+            id(idle_seconds) = 0;
+          }
+      - if:
+          condition:
+            lambda: return id(show_clock);
+          then:
+            - component.update: main_display
+
+# --- MAKING THINGS ADDRESSABLE -----------------------------------
 #Output exposes hardware functionality to ESPHome.
 output:
   # The display backlight exposed as an output in ESPHome:
@@ -101,6 +1358,33 @@ output:
     id: backlight_output
     pin: GPIO42
     inverted: true
+
+  #audio PA enable pin:
+  - platform: gpio
+    pin: 46
+    id: audio_pa_pin
+  
+  #Used together with light clock_color_picker:
+  - platform: template
+    id: clock_color_r
+    type: float
+    write_action:
+      - lambda: |-
+          return;
+
+  - platform: template
+    id: clock_color_g
+    type: float
+    write_action:
+      - lambda: |-
+          return;
+
+  - platform: template
+    id: clock_color_b
+    type: float
+    write_action:
+      - lambda: |-
+          return;
 
 #The Light partition allows controll of single addressable lights or a combination of addressable light segments:
 light:
@@ -113,20 +1397,382 @@ light:
     output: backlight_output
     restore_mode: ALWAYS_ON
     default_transition_length: 250ms
+  
+  #Used in/by pages under display. When called it returns the color value stored in the corresponding output.
+  - platform: rgb
+    id: clock_color_picker
+    name: "Clock Color"
+    entity_category: config
+    red: clock_color_r
+    green: clock_color_g
+    blue: clock_color_b
 
+# --- GRAPHICAL STUFF --------------------------------------------
 #Stores graphical images on the device, you can then draw the images on compatible displays:
 image:
-  - file: ${success_image_file}
-    id: success_img
+  - file: ${error_illustration_file}
+    id: casita_error
+    resize: ${imagewidth}x${imageheight}
+    type: RGB565
+  - file: ${idle_illustration_file}
+    id: casita_idle
+    resize: ${imagewidth}x${imageheight}
+    type: RGB565
+  - file: ${listening_illustration_file}
+    id: casita_listening
+    resize: ${imagewidth}x${imageheight}
+    type: RGB565
+  - file: ${thinking_illustration_file}
+    id: casita_thinking
+    resize: ${imagewidth}x${imageheight}
+    type: RGB565
+  - file: ${replying_illustration_file}
+    id: casita_replying
+    resize: ${imagewidth}x${imageheight}
+    type: RGB565
+  - file: ${timer_finished_illustration_file}
+    id: casita_timer_finished
+    resize: ${imagewidth}x${imageheight}
+    type: RGB565
+  - file: ${loading_illustration_file}
+    id: casita_initializing
+    resize: ${imagewidth}x${imageheight}
+    type: RGB565
+  - file: ${playing_illustration_file}
+    id: casita_playing
+    resize: ${imagewidth}x${imageheight}
+    type: RGB565
+  - file: https://raw.githubusercontent.com/RealDeco/xiaozhi-esphome/main/images/Other/error-no-wifi.png
+    id: error_no_wifi
+    resize: ${imagewidth}x${imageheight}
+    type: RGB565
+  - file: https://github.com/RealDeco/xiaozhi-esphome/raw/main/images/Other/error-no-ha.png
+    id: error_no_ha
     resize: ${imagewidth}x${imageheight}
     type: RGB565
 
+online_image:
+  - id: clock_background
+    url: ${clock_background_file}
+    format: PNG
+    type: RGB565
+    resize: ${imagewidth}x${imageheight}
+    update_interval: never
+  - id: temp_fullscreen
+    url: ${clock_background_file}
+    format: PNG
+    type: RGB565
+    resize: ${imagewidth}x${imageheight}
+    update_interval: never
+
 #The fonts in use is defined here:
 font:
-  - file: "gfonts://Roboto"
-    id: my_font
-    size: 20
+  - file:
+      type: gfonts
+      family: ${font_family}
+      weight: 300
+    id: font_request_response
+    size: 15
+    glyphsets:
+      - ${font_glyphsets}
+  - file:
+      type: gfonts
+      family: ${font_family}
+      weight: 300
+    id: font_battery
+    size: 14
+    glyphsets:
+      - ${font_glyphsets}
+  - file:
+      type: gfonts
+      family: Syne Mono
+      weight: 400
+    id: font_big_clock_mono
+    size: 42
+    glyphsets:
+      - ${font_glyphsets}
+  - file:
+      type: gfonts
+      family: ${font_family}
+      weight: 400
+    id: font_big_date
+    size: 22
+    glyphsets:
+      - ${font_glyphsets}
+  - file:
+      type: gfonts
+      family: Syne Mono
+      weight: 400
+    id: font_small_clock_mono
+    size: 24
+    glyphsets:
+      - ${font_glyphsets}
 
+#Background colors and such:
+color:
+  - id: idle_color
+    hex: ${loading_illustration_background_color}
+  - id: listening_color
+    hex: ${listening_illustration_background_color}
+  - id: thinking_color
+    hex: ${thinking_illustration_background_color}
+  - id: replying_color
+    hex: ${replying_illustration_background_color}
+  - id: loading_color
+    hex: ${loading_illustration_background_color}
+  - id: error_color
+    hex: ${error_illustration_background_color}
+  - id: active_timer_color
+    hex: "26ed3a"
+  - id: paused_timer_color
+    hex: "3b89e3"
+  - id: seconds_dot_color
+    hex: "3b89e3"
+
+# --- VOICE ASSISTANT --------------------------------------------
+micro_wake_word:
+  id: mww
+  models:
+    - okay_nabu
+    - hey_jarvis
+    - alexa
+  #  - hey_mycroft
+    - model: https://raw.githubusercontent.com/formatBCE/Respeaker-Lite-ESPHome-integration/refs/heads/main/microwakeword/models/v2/kenobi.json
+  #  - model: https://raw.githubusercontent.com/liedtkeInTUM/microWakeWords/refs/heads/main/models/v2/hey_phoenix.json
+  #  - model: https://raw.githubusercontent.com/esphome/micro-wake-word-models/refs/heads/main/models/v2/experiments/choo_choo_homie.json
+  #  - model: https://raw.githubusercontent.com/esphome/micro-wake-word-models/refs/heads/main/models/v2/experiments/hey_home_assistant.json
+  #  - model: https://raw.githubusercontent.com/esphome/micro-wake-word-models/refs/heads/main/models/v2/experiments/hey_peppa_pig.json
+  #  - model: https://raw.githubusercontent.com/esphome/micro-wake-word-models/refs/heads/main/models/v2/experiments/okay_computer.json
+  on_wake_word_detected:
+    - script.execute: reset_screensaver
+    - if:
+        condition:
+          switch.is_on: wake_sound
+        then:
+          - script.execute:
+              id: play_sound
+              priority: true
+              sound_file: !lambda return id(wake_word_triggered_sound);
+          - delay: 300ms
+    - voice_assistant.start:
+        wake_word: !lambda return wake_word;
+
+voice_assistant:
+  id: va
+  microphone: box_mic
+  media_player: external_media_player
+  micro_wake_word: mww
+  noise_suppression_level: 2
+  auto_gain: 31dBFS
+  volume_multiplier: 2.0
+
+  on_listening:
+    - script.execute: reset_screensaver
+    - lambda: id(voice_assistant_phase) = ${voice_assist_listening_phase_id};
+    - text_sensor.template.publish:
+        id: text_request_full
+        state: "..."
+    - text_sensor.template.publish:
+        id: text_response_full
+        state: "..."
+    - text_sensor.template.publish:
+        id: text_request
+        state: "..."
+    - text_sensor.template.publish:
+        id: text_response
+        state: "..."
+    - script.execute: draw_display
+
+  on_stt_vad_end:
+    - lambda: id(voice_assistant_phase) = ${voice_assist_thinking_phase_id};
+    - script.execute: draw_display
+  
+  on_stt_end:
+    - text_sensor.template.publish:
+        id: text_request
+        state: !lambda return x;
+    - text_sensor.template.publish:
+        id: text_request_full
+        state: !lambda return x;
+    - script.execute: draw_display
+
+  on_tts_start:
+    - script.execute: reset_screensaver
+    - text_sensor.template.publish:
+        id: text_response
+        state: !lambda return x;
+    - text_sensor.template.publish:
+        id: text_response_full
+        state: !lambda return x;
+    - lambda: id(voice_assistant_phase) = ${voice_assist_replying_phase_id};
+    - lambda: 'id(playing_internal_sound) = true;'
+    - script.execute: draw_display
+
+  on_end:
+    - wait_until:
+        condition:
+          - media_player.is_announcing:
+        timeout: 0.5s
+    - wait_until:
+        condition:
+          - and:
+              - not:
+                  media_player.is_announcing:
+              - not:
+                  speaker.is_playing:
+                    id: box_speaker
+    - if:
+        condition:
+          - lambda: return id(wake_word_engine_location).state == "On device";
+        then:
+          - lambda: id(va).set_use_wake_word(false);
+          - micro_wake_word.start:
+    - script.execute: draw_display
+    - text_sensor.template.publish:
+        id: text_request
+        state: ""
+    - text_sensor.template.publish:
+        id: text_response
+        state: ""
+
+  on_error:
+    - if:
+        condition:
+          lambda: return !id(init_in_progress);
+        then:
+          - lambda: id(voice_assistant_phase) = ${voice_assist_error_phase_id};
+          - script.execute: draw_display
+          - delay: 1s
+          - script.execute: draw_display
+
+  on_client_connected:
+    - lambda: id(init_in_progress) = false;
+    - script.execute: start_wake_word
+    - script.execute: draw_display
+
+  on_client_disconnected:
+    - script.execute: stop_wake_word
+    - lambda: id(voice_assistant_phase) = ${voice_assist_not_ready_phase_id};
+    - script.execute: draw_display
+
+  on_timer_started:
+    - script.execute: reset_screensaver
+    - script.execute: draw_display
+
+  on_timer_cancelled:
+    - script.execute: draw_display
+
+  on_timer_updated:
+    - script.execute: draw_display
+
+  on_timer_tick:
+    - script.execute: draw_display
+
+  on_timer_finished:
+    - switch.turn_on: timer_ringing
+    - wait_until:
+        condition:
+          - media_player.is_announcing:
+    - lambda: id(voice_assistant_phase) = ${voice_assist_timer_finished_phase_id};
+    - script.execute: draw_display
+
+# --- AUDIO ------------------------------------------------------
+i2s_audio:
+  - id: i2s_audio_bus
+    i2s_lrclk_pin: GPIO13
+    i2s_bclk_pin: GPIO14
+    i2s_mclk_pin: GPIO11
+
+audio_adc:
+  - platform: es7210
+    i2c_id: bus_a
+    id: es7210_adc
+    bits_per_sample: 16bit
+    sample_rate: 16000
+    address: 0x41
+
+audio_dac:
+  - platform: es8311
+    i2c_id: bus_a
+    id: es8311_dac
+    bits_per_sample: 16bit
+    sample_rate: 24000
+
+microphone:
+  - platform: i2s_audio
+    id: box_mic
+    i2s_audio_id: i2s_audio_bus
+    i2s_din_pin: GPIO38
+    adc_type: external
+    channel: left
+    pdm: false
+    sample_rate: 16000
+    bits_per_sample: 16bit
+
+speaker:
+  - platform: i2s_audio
+    id: box_speaker
+    i2s_audio_id: i2s_audio_bus
+    i2s_dout_pin: GPIO12
+    dac_type: external
+    audio_dac: es8311_dac
+    sample_rate: 24000
+    channel: mono
+
+media_player:
+  - platform: speaker
+    volume_min: 0.5
+    volume_max: 0.7 # don't go higher than 0.8
+    name: None
+    id: external_media_player
+    announcement_pipeline:
+      speaker: box_speaker
+      format: FLAC
+      sample_rate: 24000
+      num_channels: 1
+    buffer_size: 250000
+
+    on_announcement:
+      - if:
+          condition:
+            - microphone.is_capturing:
+          then:
+            - script.execute: stop_wake_word
+            - if:
+                condition:
+                  - lambda: return id(wake_word_engine_location).state == "In Home Assistant";
+                then:
+                  - wait_until:
+                      condition:
+                        - not:
+                            voice_assistant.is_running:
+      - if:
+          condition:
+            lambda: 'return id(playing_internal_sound);'
+          then:
+            - lambda: 'id(playing_internal_sound) = false;'
+          else:
+            - script.execute: reset_screensaver
+            - display.page.show: now_playing_page
+            - component.update: main_display
+    on_idle:
+      - if:
+          condition:
+            not:
+              voice_assistant.is_running:
+          then:
+            - script.execute: start_wake_word
+            - script.execute: draw_display
+
+    files:
+      - id: timer_finished_sound
+        file: https://github.com/RealDeco/xiaozhi-esphome/raw/main/sounds/timer_finished.flac
+      - id: wake_word_triggered_sound
+        file: https://github.com/RealDeco/xiaozhi-esphome/raw/main/sounds/wake_word_triggered.flac
+      - id: ready_sound
+        file: ${startup_sound_file}
+
+# --- TOUCH PANEL ------------------------------------------------------
 #Used for the touchscreen, CST816S (or CST816T, according to the logs from the physical ESP, with address 0x15; see also the touchscreen component):
 i2c:
   - id: bus_a
@@ -139,16 +1785,112 @@ i2c:
 touchscreen:
   - platform: cst816
     id: my_touchscreen
-    interrupt_pin: GPIO40                                         # If inverted: NACK.
-    skip_probe: True                                              
-    address: 0x15                                                 
+    interrupt_pin: GPIO40                                         # If inverted: NACK.                                               
     display: main_display
     i2c_id: bus_a                                                 
     on_touch:
-      - logger.log: "touchade skärmen"
-    on_release:
-      - logger.log: "Släppte skärmen."
+      then:
+        - lambda: |-
+            id(gs_touch_active) = true;
+            id(gs_start_x) = touch.x;
+            id(gs_start_y) = touch.y;
+            id(gs_last_x)  = touch.x;
+            id(gs_last_y)  = touch.y;
+            id(gs_start_ms) = millis();
 
+    on_update:
+      then:
+        - lambda: |-
+            if (!id(gs_touch_active)) return;
+            for (auto &t : touches) {
+              if (t.state >= 1 && t.state <= 2) {
+                id(gs_last_x) = t.x;
+                id(gs_last_y) = t.y;
+                break;
+              }
+            }
+    
+    on_release:
+      then:
+        - lambda: |-
+            if (!id(gs_touch_active)) return;
+            id(gs_touch_active) = false;
+
+            const int start_x = id(gs_start_x);
+            const int start_y = id(gs_start_y);
+            const int end_x   = id(gs_last_x);
+            const int end_y   = id(gs_last_y);
+            const int dx = end_x - start_x;
+            const int dy = end_y - start_y;
+            const uint32_t dt = millis() - id(gs_start_ms);
+
+            // Scale thresholds with screen
+            const int w = id(main_display).get_width();
+            const int h = id(main_display).get_height();
+            const int min_dim = (w < h) ? w : h;
+
+            // Swipe thresholds
+            const int MIN_DIST = std::max(16, min_dim / 8);
+            const uint32_t MAX_TIME = 1500;
+
+            // Tap guard (strict)
+            const int TAP_MAX_DIST  = std::max(8,  min_dim / 20);
+            const uint32_t TAP_MAX_TIME = 300;
+
+            // Tap fallback (more forgiving)
+            const int TAP_FB_DIST  = std::max(14, min_dim / 12);
+            const uint32_t TAP_FB_TIME = 700;
+
+            // Normalize for display rotation
+            const int ROT = ${rotate_display};
+            int ndx = dx, ndy = dy;
+            switch (ROT) {
+              case 0:   break;
+              case 90:  ndx =  dy;  ndy = -dx; break;
+              case 180: ndx = -dx;  ndy = -dy; break;
+              case 270: ndx = -dy;  ndy =  dx; break;
+              default: break;
+            }
+
+            const int absx = std::abs(ndx);
+            const int absy = std::abs(ndy);
+
+            bool is_left=false, is_right=false, is_up=false, is_down=false;
+
+            // Swipe?
+            if (dt <= MAX_TIME && (absx >= MIN_DIST || absy >= MIN_DIST)) {
+              if (absx >= absy) {
+                if (ndx < 0) is_left = true; else is_right = true;
+              } else {
+                if (ndy < 0) is_up = true; else is_down = true;
+              }
+            }
+
+            // Not a swipe → tap (strict, then forgiving fallback)
+            if (!(is_left || is_right || is_up || is_down)) {
+              if ((absx <= TAP_MAX_DIST && absy <= TAP_MAX_DIST && dt <= TAP_MAX_TIME) ||
+                  (absx <= TAP_FB_DIST  && absy <= TAP_FB_DIST  && dt <= TAP_FB_TIME)) {
+                id(pulse_touch_input).execute();
+              }
+              return;
+            }
+
+            // Always expose to HA via non-blocking pulses
+            if (is_left)  id(pulse_swipe_left).execute();
+            if (is_right) id(pulse_swipe_right).execute();
+            if (is_up)    id(pulse_swipe_up).execute();
+            if (is_down)  id(pulse_swipe_down).execute();
+
+            // Optional local handling
+            if (id(swipe_local).state) {
+              if (is_left)  id(swipe_left_action).execute();
+              if (is_right) id(swipe_right_action).execute();
+              if (is_up)    id(swipe_up_action).execute();
+              if (is_down)  id(swipe_down_action).execute();
+            }
+
+# --- DISPLAY ------------------------------------
+#Is needed for the display to work:
 spi:
   id: display_qspi
   type: quad
@@ -383,12 +2125,1574 @@ display:
       - 0x11            # Sleep out
       - delay 120ms
       - 0x29            # Display ON
-    lambda: |-
-      // 1. Fyll skärmen med svart färg
-      it.fill(Color::BLACK);
-      
-      // 2. Rita din bild i mitten
-      it.image(0, 0, id(success_img));
-      
-      // 3. Skriv en text för att verifiera färgerna
-      it.print(180, 320, id(my_font), Color::WHITE, TextAlign::CENTER, "Display OK!");
+    pages:
+      - id: idle_page
+        lambda: |-
+          it.fill(id(idle_color));
+          it.image((it.get_width() / 2), (it.get_height() / 2), id(casita_idle), ImageAlign::CENTER);
+          id(draw_active_timer_widget).execute();
+          id(draw_timer_timeline).execute();
+
+          if (id(show_battery_status).state) {
+            // ---- layout ----
+            const int top = 2;
+            const int w   = 56;     // body width (no cap) - made wider
+            const int h   = 24;     // body height - made taller for 14px font
+            const int capw = 5;     // cap width
+            const int caph = h - 8; // cap height
+            const int pad  = 3;     // inner padding
+
+            // center horizontally
+            const int cx = it.get_width() / 2;
+            const int x  = cx - (w + capw) / 2;
+            const int y  = top;
+
+            // percentage + color
+            float pct = id(battery_percentage).state;
+            if (pct < 0) pct = 0; else if (pct > 100) pct = 100;
+
+            Color lvl = Color(0x00, 0xA8, 0x00);      // green
+            if (pct <= 20)       lvl = Color(0xD0, 0x00, 0x00); // red
+            else if (pct <= 50)  lvl = Color(0xD0, 0x9A, 0x00); // yellow
+
+            // ---- body outline ----
+            it.filled_rectangle(x, y, w, h, id(idle_color));
+            it.rectangle(x, y, w, h, Color::WHITE); // white outline
+
+            // cap
+            const int capx = x + w;
+            const int capy = y + (h - caph) / 2;
+            it.filled_rectangle(capx, capy, capw, caph, Color::BLACK);
+            it.rectangle(capx, capy, capw, caph, Color::WHITE);
+
+            // inner black background
+            const int inx = x + pad;
+            const int iny = y + pad;
+            const int inw = w - 2*pad;
+            const int inh = h - 2*pad;
+            it.filled_rectangle(inx, iny, inw, inh, Color::BLACK);
+
+            // level fill
+            int fw = (int)(inw * (pct / 100.0f));
+            if (fw > 0) it.filled_rectangle(inx, iny, fw, inh, lvl);
+            it.rectangle(inx, iny, inw, inh, Color::WHITE);
+
+            // ---- percentage text INSIDE ----
+            char txt[8];
+            snprintf(txt, sizeof(txt), "%.0f%%", pct);
+
+            // center text in body
+            const int tx = x + w / 2;
+            const int ty = y + h / 2;
+            it.printf(tx+1, ty+1, id(font_battery), Color::BLACK, TextAlign::CENTER, "%s", txt);
+            it.printf(tx,   ty,   id(font_battery), Color::WHITE, TextAlign::CENTER, "%s", txt);
+          }
+      - id: listening_page
+        lambda: |-
+          it.fill(id(listening_color));
+          it.image((it.get_width() / 2), (it.get_height() / 2), id(casita_listening), ImageAlign::CENTER);
+          id(draw_timer_timeline).execute();
+      - id: thinking_page
+        lambda: |-
+          it.fill(id(thinking_color));
+          const int W = it.get_width();
+          const int H = it.get_height();
+          it.image(W / 2, H / 2, id(casita_thinking), ImageAlign::CENTER);
+
+          if (id(show_text).state) {
+            const int box_h = 30;
+            const int margin_top = 20;
+            const int box_w = std::min(210, W - 10);   // keep 5px side padding minimum
+            const int x0 = (W - box_w) / 2;            // center horizontally
+            const int y0 = margin_top;
+
+            it.filled_rectangle(x0, y0, box_w, box_h, Color::WHITE);
+            it.rectangle(x0, y0, box_w, box_h, Color::BLACK);
+            // center text horizontally
+            it.printf(W / 2, y0 + 5, id(font_request_response), Color::BLACK, TextAlign::TOP_CENTER, "%s",
+                      id(text_request).state.c_str());
+          }
+          id(draw_timer_timeline).execute();
+      - id: replying_page
+        lambda: |-
+          it.fill(id(replying_color));
+          const int W = it.get_width();
+          const int H = it.get_height();
+          it.image(W / 2, H / 2, id(casita_replying), ImageAlign::CENTER);
+
+          if (id(show_text).state) {
+            const int box_h = 30;
+            const int margin_bottom = 20;              // distance from bottom edge
+            const int box_w = std::min(210, W - 10);   // keep 5px side padding minimum
+            const int x0 = (W - box_w) / 2;            // center horizontally
+            const int y0 = H - margin_bottom - box_h;  // stick to bottom with margin
+
+            it.filled_rectangle(x0, y0, box_w, box_h, Color::WHITE);
+            it.rectangle(x0, y0, box_w, box_h, Color::BLACK);
+            // center text horizontally
+            it.printf(W / 2, y0 + 5, id(font_request_response), Color::BLACK, TextAlign::TOP_CENTER, "%s",
+                      id(text_response).state.c_str());
+          }
+          id(draw_timer_timeline).execute();
+      - id: timer_finished_page
+        lambda: |-
+          it.fill(id(idle_color));
+          it.image((it.get_width() / 2), (it.get_height() / 2), id(casita_timer_finished), ImageAlign::CENTER);
+      - id: error_page
+        lambda: |-
+          it.fill(id(error_color));
+          it.image((it.get_width() / 2), (it.get_height() / 2), id(casita_error), ImageAlign::CENTER);
+      - id: no_ha_page
+        lambda: |-
+          it.image((it.get_width() / 2), (it.get_height() / 2), id(error_no_ha), ImageAlign::CENTER);
+      - id: no_wifi_page
+        lambda: |-
+          it.image((it.get_width() / 2), (it.get_height() / 2), id(error_no_wifi), ImageAlign::CENTER);
+      - id: initializing_page
+        lambda: |-
+          it.fill(id(loading_color));
+          it.image((it.get_width() / 2), (it.get_height() / 2), id(casita_initializing), ImageAlign::CENTER);
+      - id: now_playing_page
+        lambda: |-
+          it.fill(Color::BLACK);
+          it.image((it.get_width() / 2), (it.get_height() / 2), id(casita_playing), ImageAlign::CENTER);
+          // Optional: show timer progress while playing
+          id(draw_timer_timeline).execute();
+      - id: default_clock
+        lambda: |-
+          // ---------- Geometry (recompute only on size change) ----------
+          const int W = it.get_width();
+          const int H = it.get_height();
+          static int prevW = -1, prevH = -1;
+
+          static int cx = 0, cy = 0;
+          static const int margin = 8;
+          static int r_outer = 0, r_sec = 0, r_min = 0, r_hr = 0;
+
+          static int dot_r_sec_small = 2;
+          static int dot_r_sec_big   = 3;
+          static int dot_r_min       = 5;
+          static int dot_r_hr        = 7;
+
+          static int16_t sec_x[60], sec_y[60];
+          static int16_t min_x[60], min_y[60];
+
+          if (W != prevW || H != prevH) {
+            prevW = W; prevH = H;
+
+            cx = W / 2; cy = H / 2;
+            r_outer = (std::min(W, H) / 2) - margin;
+            r_sec   = r_outer;
+            r_min   = r_outer - 14;
+            r_hr    = r_outer - 28;
+
+            // Scale dot sizes with screen size (once per size change)
+            dot_r_sec_small = std::max(2, std::min(3, W / 180));
+            dot_r_sec_big   = dot_r_sec_small + 1;
+            dot_r_min       = dot_r_sec_big + 2;
+            dot_r_hr        = dot_r_min + 2;
+
+            // Precompute positions
+            const float PI = 3.1415926f;
+            for (int i = 0; i < 60; i++) {
+              float angle = (i / 60.0f) * 2.0f * PI - PI/2.0f;
+              sec_x[i] = cx + (int16_t)(r_sec * cosf(angle));
+              sec_y[i] = cy + (int16_t)(r_sec * sinf(angle));
+              min_x[i] = cx + (int16_t)(r_min * cosf(angle));
+              min_y[i] = cy + (int16_t)(r_min * sinf(angle));
+            }
+          }
+
+          // ---------- Colors ----------
+          static const Color clock_yellow(0xff,0xc1,0x07);
+          float rr = id(clock_color_picker).current_values.get_red();
+          float gg = id(clock_color_picker).current_values.get_green();
+          float bb = id(clock_color_picker).current_values.get_blue();
+          if (rr == 0.0f && gg == 0.0f && bb == 0.0f) { rr = gg = bb = 1.0f; } // default white
+          const Color clock_col((uint8_t)(rr * 255.0f), (uint8_t)(gg * 255.0f), (uint8_t)(bb * 255.0f));
+
+          static const Color minute_palette[10] = {
+            Color(0x3b,0x89,0xe3), Color(0x26,0xed,0x3a), Color(0xff,0xc1,0x07),
+            Color(0xff,0x5a,0x36), Color(0xff,0x3b,0x8d), Color(0x9c,0x27,0xb0),
+            Color(0x00,0xbc,0xd4), Color(0x8b,0xc3,0x4a), Color(0xfe,0x6d,0x73),
+            Color(0x60,0x7d,0x8b)
+          };
+
+          // ---------- Time ----------
+          auto now = id(homeassistant_time).now();
+          const int sec    = now.second;
+          const int minute = now.minute;
+          const int hour12 = now.hour % 12;
+
+          // Smooth hour motion anchor (fine even at 1 Hz; future-proof if you speed up)
+          static int last_sec = -1;
+          static uint32_t sec_anchor_ms = 0;
+          if (sec != last_sec) { last_sec = sec; sec_anchor_ms = millis(); }
+          float sec_frac = (millis() - sec_anchor_ms) / 1000.0f;
+          if (sec_frac < 0.0f) sec_frac = 0.0f;
+          if (sec_frac > 0.999f) sec_frac = 0.999f;
+
+          // ---------- Background ----------
+          const bool show_wallpaper = id(clock_show_wallpaper).state;
+          if (show_wallpaper) {
+            // Draw wallpaper each tick so nothing sticks.
+            it.image(cx, cy, id(clock_background), ImageAlign::CENTER);
+          } else {
+            // No wallpaper: clear to black once per tick (cheap and avoids ghosts).
+            it.fill(Color::BLACK);
+          }
+
+          // ---------- Thin black band under seconds (only needed over wallpaper) ----------
+          if (show_wallpaper && id(clock_show_dots).state) {
+            int half_thick = dot_r_sec_big + 2;  // enough to cover markers
+            for (int dr = -half_thick; dr <= half_thick; dr++) {
+              it.circle(cx, cy, r_sec + dr, Color::BLACK);
+            }
+          }
+
+          // ---------- Seconds ring ----------
+          if (id(clock_show_dots).state) {
+            // 5-second markers (white)
+            for (int i = 0; i < 60; i += 5) {
+              it.filled_circle(sec_x[i], sec_y[i], dot_r_sec_big, Color::WHITE);
+            }
+            // Progress dots (skip 5s positions)
+            const Color sec_col = minute_palette[minute % 10];
+            for (int i = 0; i <= sec; i++) {
+              if (i % 5 == 0) continue;
+              it.filled_circle(sec_x[i], sec_y[i], dot_r_sec_small, sec_col);
+            }
+          }
+
+          // ---------- Minute dot (yellow) ----------
+          it.filled_circle(min_x[minute], min_y[minute], dot_r_min, clock_yellow);
+
+          // ---------- Hour dot (yellow, smooth with minute+second) ----------
+          {
+            const float PI = 3.1415926f;
+            float h_pos = (hour12 + (minute + sec_frac) / 60.0f) / 12.0f;
+            float h_angle = h_pos * 2.0f * PI - PI/2.0f;
+            int hx = cx + (int)(r_hr * cosf(h_angle));
+            int hy = cy + (int)(r_hr * sinf(h_angle));
+            it.filled_circle(hx, hy, dot_r_hr, clock_yellow);
+          }
+
+          // ---------- Time text ----------
+          if (id(clock_show_time).state) {
+            int clock_y = id(clock_show_date).state ? (cy - 24) : cy;
+            if (id(clock_24h).state) {
+              if (id(clock_show_seconds).state)
+                it.strftime(cx, clock_y, id(font_big_clock_mono), clock_col, TextAlign::CENTER, "%H:%M:%S", now);
+              else
+                it.strftime(cx, clock_y, id(font_big_clock_mono), clock_col, TextAlign::CENTER, "%H:%M", now);
+            } else {
+              if (id(clock_show_seconds).state)
+                it.strftime(cx, clock_y, id(font_big_clock_mono), clock_col, TextAlign::CENTER, "%I:%M:%S%p", now);
+              else
+                it.strftime(cx, clock_y, id(font_big_clock_mono), clock_col, TextAlign::CENTER, "%I:%M%p", now);
+            }
+          }
+
+          // ---------- Date ----------
+          if (id(clock_show_date).state) {
+            if (id(clock_show_time).state) {
+              // Normal layout: time shown, date below it
+              if (id(clock_24h).state)
+                it.strftime(cx, cy + 14, id(font_big_date), clock_col, TextAlign::CENTER, "%a, %d %b", now);
+              else
+                it.strftime(cx, cy + 14, id(font_big_date), clock_col, TextAlign::CENTER, "%a, %b %d", now);
+            } else {
+              // Time hidden: center the date where time would normally sit
+              int date_y = cy;
+              if (id(clock_24h).state)
+                it.strftime(cx, date_y, id(font_big_date), clock_col, TextAlign::CENTER, "%a, %d %b", now);
+              else
+                it.strftime(cx, date_y, id(font_big_date), clock_col, TextAlign::CENTER, "%a, %b %d", now);
+            }
+          }
+
+          if (id(show_battery_status).state) {
+            // ---- layout ----
+            const int top = 2;
+            const int w   = 56;     // body width (no cap) - made wider
+            const int h   = 24;     // body height - made taller for 14px font
+            const int capw = 5;     // cap width
+            const int caph = h - 8; // cap height
+            const int pad  = 3;     // inner padding
+
+            // center horizontally
+            const int cx = it.get_width() / 2;
+            const int x  = cx - (w + capw) / 2;
+            const int y  = top;
+
+            // percentage + color
+            float pct = id(battery_percentage).state;
+            if (pct < 0) pct = 0; else if (pct > 100) pct = 100;
+
+            Color lvl = Color(0x00, 0xA8, 0x00);      // green
+            if (pct <= 20)       lvl = Color(0xD0, 0x00, 0x00); // red
+            else if (pct <= 50)  lvl = Color(0xD0, 0x9A, 0x00); // yellow
+
+            // ---- body outline ----
+            it.filled_rectangle(x, y, w, h, id(idle_color));
+            it.rectangle(x, y, w, h, Color::WHITE); // white outline
+
+            // cap
+            const int capx = x + w;
+            const int capy = y + (h - caph) / 2;
+            it.filled_rectangle(capx, capy, capw, caph, Color::BLACK);
+            it.rectangle(capx, capy, capw, caph, Color::WHITE);
+
+            // inner black background
+            const int inx = x + pad;
+            const int iny = y + pad;
+            const int inw = w - 2*pad;
+            const int inh = h - 2*pad;
+            it.filled_rectangle(inx, iny, inw, inh, Color::BLACK);
+
+            // level fill
+            int fw = (int)(inw * (pct / 100.0f));
+            if (fw > 0) it.filled_rectangle(inx, iny, fw, inh, lvl);
+            it.rectangle(inx, iny, inw, inh, Color::WHITE);
+
+            // ---- percentage text INSIDE ----
+            char txt[8];
+            snprintf(txt, sizeof(txt), "%.0f%%", pct);
+
+            // center text in body
+            const int tx = x + w / 2;
+            const int ty = y + h / 2;
+            it.printf(tx+1, ty+1, id(font_battery), Color::BLACK, TextAlign::CENTER, "%s", txt);
+            it.printf(tx,   ty,   id(font_battery), Color::WHITE, TextAlign::CENTER, "%s", txt);
+          }
+      - id: flip_clock
+        lambda: |-
+          // --- base / optional wallpaper ---
+          it.fill(Color::BLACK);
+          if (id(clock_show_wallpaper).state) {
+            it.image((it.get_width() / 2), (it.get_height() / 2), id(clock_background), ImageAlign::CENTER);
+          }
+
+          const int W = it.get_width();
+          const int H = it.get_height();
+          const int cx = W / 2;
+          const int cy = H / 2;
+
+          // Colors from HA color wheel
+          float rr = id(clock_color_picker).current_values.get_red();
+          float gg = id(clock_color_picker).current_values.get_green();
+          float bb = id(clock_color_picker).current_values.get_blue();
+          if (rr == 0.0f && gg == 0.0f && bb == 0.0f) { rr = gg = bb = 1.0f; }
+          const Color FG((uint8_t)(rr * 255.0f), (uint8_t)(gg * 255.0f), (uint8_t)(bb * 255.0f));
+          const Color PANEL_BG(20, 20, 20);
+          const Color PANEL_EDGE(70, 70, 70);
+          const Color HINGE(40, 40, 40);
+          const Color COLON_DOT(180, 180, 180);
+
+          auto now = id(homeassistant_time).now();
+          int hour = now.hour;
+          if (!id(clock_24h).state) {
+            hour %= 12;
+            if (hour == 0) hour = 12;
+          }
+          int minute = now.minute;
+          int sec = now.second;
+
+          // --- geometry ---
+          const int gap       = std::max(6, W / 80);
+          const int colon_gap = std::max(8, W / 60);
+
+          // Seconds ring geometry
+          const int r_ring = (std::min(W, H) / 2) - std::max(6, W/50);   // dot center radius
+          const int dot_r  = std::max(2, std::min(3, W / 180));
+
+          // Keep content inside the dots
+          const int ring_clearance = dot_r * 3 + 8;
+          const int allowed_half   = r_ring - ring_clearance;
+          const int max_content_w  = std::max(20, 2 * allowed_half);
+          const int max_content_h  = std::max(20, 2 * allowed_half);
+
+          // Guess panel size, then scale to fit allowed box
+          int panel_w_guess = (W - 3*gap - 2*colon_gap) / 4;
+          int panel_h_guess = (int)(panel_w_guess * 1.6f);
+
+          auto total_size_for = [&](int pw, int ph, int &tw, int &th) {
+            tw = 4*pw + 3*gap + 2*colon_gap;
+            th = ph;
+          };
+
+          int tw, th;
+          total_size_for(panel_w_guess, panel_h_guess, tw, th);
+          float sx = (float)max_content_w / (float)tw;
+          float sy = (float)max_content_h / (float)th;
+          float s  = std::min(1.0f, std::min(sx, sy) * 0.95f);  // small safety buffer
+
+          const int panel_w = std::max(10, (int)(panel_w_guess * s));
+          const int panel_h = std::max(16, (int)(panel_h_guess * s));
+          total_size_for(panel_w, panel_h, tw, th);
+
+          // Center the flip cluster
+          const int left = cx - tw/2;
+          const int top  = cy - panel_h/2;
+
+          // Digits
+          int h1 = (hour / 10) % 10;
+          int h2 = hour % 10;
+          int m1 = (minute / 10) % 10;
+          int m2 = minute % 10;
+
+          // --- helpers ---
+          auto draw_panel = [&](int x, int y, int w, int h) {
+            it.filled_rectangle(x, y, w, h, PANEL_BG);
+            it.rectangle(x, y, w, h, PANEL_EDGE);
+            int midy = y + h/2;
+            it.line(x + 1, midy, x + 1 + (w - 2), midy, HINGE);
+            int pin_r = std::max(1, w / 40);
+            it.filled_circle(x + w/6, midy, pin_r, HINGE);
+            it.filled_circle(x + w - w/6, midy, pin_r, HINGE);
+            int band = std::max(2, h / 20);
+            it.filled_rectangle(x+1, y+1, w-2, band, Color(32,32,32));
+            it.filled_rectangle(x+1, midy+1, w-2, band, Color(16,16,16));
+          };
+          auto print_digit = [&](int x, int y, int w, int h, int digit) {
+            char buf[2]; buf[0] = '0' + digit; buf[1] = '\0';
+            it.printf(x + w/2, y + h/2 - 1, id(font_big_clock_mono), FG, TextAlign::CENTER, "%s", buf);
+          };
+
+          // Panel positions + digits + colon + AM/PM
+          if (id(clock_show_time).state) {
+            int x1 = left;
+            int x2 = x1 + panel_w + gap;
+            int colon_x = x2 + panel_w + colon_gap;
+            int x3 = colon_x + colon_gap;
+            int x4 = x3 + panel_w + gap;
+
+            // Draw panels + digits
+            draw_panel(x1, top, panel_w, panel_h); print_digit(x1, top, panel_w, panel_h, h1);
+            draw_panel(x2, top, panel_w, panel_h); print_digit(x2, top, panel_w, panel_h, h2);
+            draw_panel(x3, top, panel_w, panel_h); print_digit(x3, top, panel_w, panel_h, m1);
+            draw_panel(x4, top, panel_w, panel_h); print_digit(x4, top, panel_w, panel_h, m2);
+
+            // Colon (blink when seconds ON; steady otherwise)
+            bool blink = id(clock_show_seconds).state && ((sec % 2) == 0);
+            int colon_r = std::max(2, panel_w / 14);
+            int colon_y_offset = panel_h / 6;
+            if (!blink) {
+              it.filled_circle(colon_x, cy - colon_y_offset, colon_r, COLON_DOT);
+              it.filled_circle(colon_x, cy + colon_y_offset, colon_r, COLON_DOT);
+            }
+          }
+
+          // --- Date ---
+          if (id(clock_show_date).state) {
+            if (id(clock_show_time).state) {
+              // Normal layout: time shown, date below it
+              const int date_pad     = std::max(6, H / 36);
+              const int extra_offset = std::max(5, H / 48);
+              const int date_margin  = std::max(3, H / 120);
+              int safe_bottom = cy + allowed_half - date_margin;
+
+              int date_y = top + panel_h + date_pad + extra_offset;
+              if (date_y > safe_bottom) date_y = safe_bottom;
+
+              if (id(clock_24h).state) {
+                it.strftime(cx, date_y, id(font_big_date), FG, TextAlign::CENTER, "%a, %d %b", now);
+              } else {
+                it.strftime(cx, date_y, id(font_big_date), FG, TextAlign::CENTER, "%a, %b %d", now);
+              }
+            } else {
+              // Time hidden: center the date where the time cluster would be
+              int date_y = cy;
+              if (id(clock_24h).state) {
+                it.strftime(cx, date_y, id(font_big_date), FG, TextAlign::CENTER, "%a, %d %b", now);
+              } else {
+                it.strftime(cx, date_y, id(font_big_date), FG, TextAlign::CENTER, "%a, %b %d", now);
+              }
+            }
+          }
+
+          // --- precomputed unit circle (once) for the seconds dots ---
+          static bool LUT_INIT = false;
+          static int16_t ux[60];
+          static int16_t uy[60];
+          if (!LUT_INIT) {
+            const float TWO_PI = 6.2831853f;
+            for (int i = 0; i < 60; i++) {
+              float a = (i / 60.0f) * TWO_PI - (3.1415926f / 2.0f);
+              ux[i] = (int16_t) lroundf(cosf(a) * 10000.0f);
+              uy[i] = (int16_t) lroundf(sinf(a) * 10000.0f);
+            }
+            LUT_INIT = true;
+          }
+
+          // --- thin black ring + progress dots ---
+          if (id(clock_show_dots).state) {
+            const int erase_thickness = dot_r * 2 + 2;   // must cover previous dots fully
+            const int r_in  = r_ring - erase_thickness/2;
+            const int r_out = r_ring + erase_thickness/2;
+            for (int rr = r_in; rr <= r_out; rr++) {
+              it.circle(cx, cy, rr, Color::BLACK);
+            }
+
+            const Color minute_palette[10] = {
+              Color(0x3b,0x89,0xe3), Color(0x26,0xed,0x3a), Color(0xff,0xc1,0x07),
+              Color(0xff,0x5a,0x36), Color(0xff,0x3b,0x8d), Color(0x9c,0x27,0xb0),
+              Color(0x00,0xbc,0xd4), Color(0x8b,0xc3,0x4a), Color(0xfe,0x6d,0x73),
+              Color(0x60,0x7d,0x8b)
+            };
+            Color sec_col = minute_palette[minute % 10];
+
+            for (int i = 0; i <= sec && i < 60; i++) {
+              int x = cx + (int)(( (long)r_ring * ux[i]) / 10000L);
+              int y = cy + (int)(( (long)r_ring * uy[i]) / 10000L);
+              it.filled_circle(x, y, dot_r, sec_col);
+            }
+          }
+
+          if (id(show_battery_status).state) {
+            // ---- layout ----
+            const int top = 2;
+            const int w   = 56;     // body width (no cap) - made wider
+            const int h   = 24;     // body height - made taller for 14px font
+            const int capw = 5;     // cap width
+            const int caph = h - 8; // cap height
+            const int pad  = 3;     // inner padding
+
+            // center horizontally
+            const int cx = it.get_width() / 2;
+            const int x  = cx - (w + capw) / 2;
+            const int y  = top;
+
+            // percentage + color
+            float pct = id(battery_percentage).state;
+            if (pct < 0) pct = 0; else if (pct > 100) pct = 100;
+
+            Color lvl = Color(0x00, 0xA8, 0x00);      // green
+            if (pct <= 20)       lvl = Color(0xD0, 0x00, 0x00); // red
+            else if (pct <= 50)  lvl = Color(0xD0, 0x9A, 0x00); // yellow
+
+            // ---- body outline ----
+            it.filled_rectangle(x, y, w, h, id(idle_color));
+            it.rectangle(x, y, w, h, Color::WHITE); // white outline
+
+            // cap
+            const int capx = x + w;
+            const int capy = y + (h - caph) / 2;
+            it.filled_rectangle(capx, capy, capw, caph, Color::BLACK);
+            it.rectangle(capx, capy, capw, caph, Color::WHITE);
+
+            // inner black background
+            const int inx = x + pad;
+            const int iny = y + pad;
+            const int inw = w - 2*pad;
+            const int inh = h - 2*pad;
+            it.filled_rectangle(inx, iny, inw, inh, Color::BLACK);
+
+            // level fill
+            int fw = (int)(inw * (pct / 100.0f));
+            if (fw > 0) it.filled_rectangle(inx, iny, fw, inh, lvl);
+            it.rectangle(inx, iny, inw, inh, Color::WHITE);
+
+            // ---- percentage text INSIDE ----
+            char txt[8];
+            snprintf(txt, sizeof(txt), "%.0f%%", pct);
+
+            // center text in body
+            const int tx = x + w / 2;
+            const int ty = y + h / 2;
+            it.printf(tx+1, ty+1, id(font_battery), Color::BLACK, TextAlign::CENTER, "%s", txt);
+            it.printf(tx,   ty,   id(font_battery), Color::WHITE, TextAlign::CENTER, "%s", txt);
+          }
+      - id: clock_7segment
+        lambda: |-
+          // -------- background / optional wallpaper ----------
+          const int W = it.get_width();
+          const int H = it.get_height();
+          it.fill(Color(0, 0, 0));
+          if (id(clock_show_wallpaper).state) {
+            it.image(W / 2, H / 2, id(clock_background), ImageAlign::CENTER);
+          }
+
+          // -------- colors ----------
+          float rr = id(clock_color_picker).current_values.get_red();
+          float gg = id(clock_color_picker).current_values.get_green();
+          float bb = id(clock_color_picker).current_values.get_blue();
+          if (rr == 0.0f && gg == 0.0f && bb == 0.0f) { rr = gg = bb = 1.0f; }
+          const Color FG((uint8_t)(rr * 255.0f), (uint8_t)(gg * 255.0f), (uint8_t)(bb * 255.0f));
+          const Color OFF(50, 50, 50);  // sweet spot for dormant LEDs
+          const Color MOON_LIT(255, 255, 255);
+          const Color MOON_DARK(60, 60, 60);
+
+          // -------- time ----------
+          auto now = id(homeassistant_time).now();
+          int hour = now.hour;
+          if (!id(clock_24h).state) {
+            hour %= 12;
+            if (hour == 0) hour = 12;
+          }
+          int minute = now.minute;
+          int sec = now.second;
+
+          // ======================= MOON (obeys clock_show_dots) =======================
+          if (id(clock_show_dots).state) {
+            // -------- moon phase calculation ----------
+            auto moon_phase_fraction = [&](int y, int m, int d) -> float {
+              int yy = y;
+              int mm = m;
+              if (mm <= 2) { yy -= 1; mm += 12; }
+              int A = yy / 100;
+              int B = 2 - A + (A / 4);
+              long JD = (long)(365.25 * (yy + 4716)) + (long)(30.6001 * (mm + 1)) + d + B - 1524.5;
+              double days_since_new = JD - 2451549.5;
+              double new_moons = days_since_new / 29.53058867;
+              double phase = new_moons - floor(new_moons);
+              return (float)phase; // 0=new, 0.5=full
+            };
+
+            float phase = moon_phase_fraction(now.year, now.month, now.day_of_month);
+            bool waxing = (phase < 0.5f);
+            float illum = waxing ? phase * 2.0f : (1.0f - phase) * 2.0f; // 0-1 illumination
+
+            // -------- moon phase name ----------
+            const char* phase_names[][2] = {
+              {"New", "Moon"},
+              {"Waxing", "Crescent"},
+              {"First", "Quarter"},
+              {"Waxing", "Gibbous"},
+              {"Full", "Moon"},
+              {"Waning", "Gibbous"},
+              {"Last", "Quarter"},
+              {"Waning", "Crescent"}
+            };
+            int phase_index = 0;
+            if      (phase < 0.03f || phase > 0.97f) phase_index = 0; // New
+            else if (phase < 0.22f)                  phase_index = 1; // Waxing Crescent
+            else if (phase < 0.28f)                  phase_index = 2; // First Quarter
+            else if (phase < 0.47f)                  phase_index = 3; // Waxing Gibbous
+            else if (phase < 0.53f)                  phase_index = 4; // Full
+            else if (phase < 0.72f)                  phase_index = 5; // Waning Gibbous
+            else if (phase < 0.78f)                  phase_index = 6; // Last Quarter
+            else                                     phase_index = 7; // Waning Crescent
+
+            const char* phase_left  = phase_names[phase_index][0];
+            const char* phase_right = phase_names[phase_index][1];
+
+            // -------- layout for moon above clock ----------
+            const int moon_diam = std::min(W / 6, H / 6); // smaller moon
+            const int moon_cx = W / 2;
+            const int moon_cy = H / 2 - (H / 4) - (H / 20); // position above digits
+
+            // Draw dark circle
+            it.filled_circle(moon_cx, moon_cy, moon_diam / 2, MOON_DARK);
+
+            // Draw lit portion
+            for (int x = -moon_diam/2; x <= moon_diam/2; x++) {
+              float norm_x = (float)x / (moon_diam / 2);
+              float edge = sqrtf(1.0f - norm_x * norm_x); // y radius at this x
+              float shade_limit = illum * (waxing ? 1.0f : -1.0f);
+              if ((waxing && norm_x <= shade_limit) || (!waxing && norm_x >= shade_limit)) {
+                it.line(moon_cx + x, moon_cy - (int)(edge * (moon_diam / 2)),
+                        moon_cx + x, moon_cy + (int)(edge * (moon_diam / 2)),
+                        MOON_LIT);
+              }
+            }
+
+            // Phase words beside moon
+            int text_gap = moon_diam / 2 + 4;
+            it.printf(moon_cx - text_gap, moon_cy, id(font_battery), FG, TextAlign::CENTER_RIGHT, "%s", phase_left);
+            it.printf(moon_cx + text_gap, moon_cy, id(font_battery), FG, TextAlign::CENTER_LEFT, "%s", phase_right);
+          }
+          // ===================== END MOON (obeys clock_show_dots) =====================
+
+          // -------- CLOCK LAYOUT ----------
+          const int cx = W / 2;
+          const int cy = H / 2;
+          const int gap       = std::max(6, W / 80);
+          const int colon_gap = std::max(8, W / 60);
+
+          int dw_guess = (W - 3*gap - 2*colon_gap) / 4;
+          int dh_guess = (int)(dw_guess * 1.9f);
+
+          auto total_size_for = [&](int dw, int dh, int &tw, int &th) {
+            tw = 4*dw + 3*gap + 2*colon_gap;
+            th = dh;
+          };
+
+          int tw, th;
+          total_size_for(dw_guess, dh_guess, tw, th);
+
+          const float sx = (float)(W * 9 / 10) / (float)tw;
+          const float sy = (float)(H / 2)       / (float)dh_guess;
+          const float s  = std::min(1.0f, std::min(sx, sy));
+
+          const int DW = std::max(18, (int)(dw_guess * s));
+          const int DH = std::max(30, (int)(dh_guess * s));
+          total_size_for(DW, DH, tw, th);
+
+          const int left = cx - tw/2;
+          const int top  = cy - DH/2;
+
+          // -------- segment blueprint ----------
+          const int T   = std::max(4, std::min(DW / 5, DH / 7));
+          const int CH  = std::max(2, T / 2);
+          const int PAD = std::max(2, T);
+          const int G   = std::max(2, T / 3);
+
+          auto seg_h = [&](int x, int y, int w, Color col) {
+            int body_w = w - 2*CH; if (body_w < 0) body_w = 0;
+            it.filled_rectangle(x + CH, y - T/2, body_w, T, col);
+            it.filled_triangle(x, y, x + CH, y - T/2, x + CH, y + T/2, col);
+            int xr = x + CH + body_w;
+            it.filled_triangle(xr + CH, y, xr, y - T/2, xr, y + T/2, col);
+          };
+          auto seg_v = [&](int x, int y, int h, Color col) {
+            int body_h = h - 2*CH; if (body_h < 0) body_h = 0;
+            it.filled_rectangle(x - T/2, y + CH, T, body_h, col);
+            it.filled_triangle(x, y, x - T/2, y + CH, x + T/2, y + CH, col);
+            int yb = y + CH + body_h;
+            it.filled_triangle(x, yb + CH, x - T/2, yb, x + T/2, yb, col);
+          };
+
+          static const uint8_t DIG[10] = {
+            0x7E,0x30,0x6D,0x79,0x33,0x5B,0x5F,0x70,0x7F,0x7B
+          };
+
+          struct Geo { int x_left,x_right,y_a,y_g,y_d,Lh,Lv_top,Lv_bot; } G0;
+          {
+            const int L = left + PAD;
+            const int Rr = left + DW - PAD;
+            const int Tt = top  + PAD;
+            const int Bb = top  + DH - PAD;
+            G0.x_left  = L + T/2;
+            G0.x_right = Rr - T/2;
+            G0.y_a = Tt + T/2;
+            G0.y_g = (Tt + Bb) / 2;
+            G0.y_d = Bb - T/2;
+            G0.Lh     = (G0.x_right - G0.x_left);
+            G0.Lv_top = (G0.y_g - G0.y_a);
+            G0.Lv_bot = (G0.y_d - G0.y_g);
+          }
+
+          auto draw_digit = [&](int x, int y, int val, Color on_col, bool draw_off) {
+            const uint8_t mask = DIG[val];
+            const int dx = x - left;
+            const int dy = y - top;
+
+            const int x_left  = G0.x_left  + dx;
+            const int x_right = G0.x_right + dx;
+            const int y_a     = G0.y_a     + dy;
+            const int y_g     = G0.y_g     + dy;
+            const int y_d     = G0.y_d     + dy;
+
+            const int a_x = x_left + G;     const int a_w = G0.Lh - 2*G;
+            const int g_x = x_left + G;     const int g_w = G0.Lh - 2*G;
+            const int d_x = x_left + G;     const int d_w = G0.Lh - 2*G;
+
+            const int f_y = y_a + G;        const int f_h = G0.Lv_top - 2*G;
+            const int b_y = y_a + G;        const int b_h = G0.Lv_top - 2*G;
+            const int e_y = y_g + G;        const int e_h = G0.Lv_bot - 2*G;
+            const int c_y = y_g + G;        const int c_h = G0.Lv_bot - 2*G;
+
+            auto draw_seg = [&](bool on, auto fn, auto... args) {
+              if (on) { fn(args..., on_col); }
+              else if (draw_off) { fn(args..., OFF); }
+            };
+
+            draw_seg(mask & 0x40, seg_h, a_x, y_a, a_w);
+            draw_seg(mask & 0x20, seg_v, x_right, b_y, b_h);
+            draw_seg(mask & 0x10, seg_v, x_right, c_y, c_h);
+            draw_seg(mask & 0x08, seg_h, d_x, y_d, d_w);
+            draw_seg(mask & 0x04, seg_v, x_left,  e_y, e_h);
+            draw_seg(mask & 0x02, seg_v, x_left,  f_y, f_h);
+            draw_seg(mask & 0x01, seg_h, g_x, y_g, g_w);
+          };
+
+          // digit positions
+          int x1 = left;
+          int x2 = x1 + DW + gap;
+          int colon_x_left = x2 + DW;
+          int x3 = colon_x_left + 2*colon_gap;
+          int x4 = x3 + DW + gap;
+
+          // -------- render digits / colon / AM-PM (guarded by Clock Show Time) --------
+          if (id(clock_show_time).state) {
+            // render digits
+            int h1 = (hour / 10) % 10;
+            int h2 = hour % 10;
+            int m1 = (minute / 10) % 10;
+            int m2 = minute % 10;
+            draw_digit(x1, top, h1, FG, true);
+            draw_digit(x2, top, h2, FG, true);
+            draw_digit(x3, top, m1, FG, true);
+            draw_digit(x4, top, m2, FG, true);
+
+            // colon
+            int colon_center_x = (x2 + DW + x3) / 2;
+            int colon_center_y = top + DH / 2;
+            bool blink = id(clock_show_seconds).state && ((sec % 2) == 0);
+            int colon_r = std::max(2, DW / 14);
+            int colon_y_offset = DH / 6;
+            if (!blink) {
+              it.filled_circle(colon_center_x, colon_center_y - colon_y_offset, colon_r, FG);
+              it.filled_circle(colon_center_x, colon_center_y + colon_y_offset, colon_r, FG);
+            }
+
+            // AM/PM
+            if (!id(clock_24h).state) {
+              const char *ampm = (now.hour >= 12) ? "PM" : "AM";
+              int ampm_x = x4 + DW - 4;
+              int ampm_y = top + DH / 2 - 3;
+              Color dim_fg(
+                (uint8_t)(FG.r * 0.7f),
+                (uint8_t)(FG.g * 0.7f),
+                (uint8_t)(FG.b * 0.7f)
+              );
+              it.printf(ampm_x, ampm_y, id(font_battery), dim_fg, TextAlign::CENTER_LEFT, "%s", ampm);
+            }
+          }
+
+          // -------- date (adapts to time shown/hidden) --------
+          if (id(clock_show_date).state) {
+            if (id(clock_show_time).state) {
+              // Normal layout: time shown, date below it
+              const int date_pad     = std::max(10, H / 20);
+              const int extra_offset = std::max(6, H / 32);
+              int date_y = top + DH + date_pad + extra_offset;
+              if (id(clock_24h).state) {
+                it.strftime(cx, date_y, id(font_big_date), FG, TextAlign::CENTER, "%a, %d %b", now);
+              } else {
+                it.strftime(cx, date_y, id(font_big_date), FG, TextAlign::CENTER, "%a, %b %d", now);
+              }
+            } else {
+              // Time hidden: center the date where the digits would be
+              int date_y = cy;
+              if (id(clock_24h).state) {
+                it.strftime(cx, date_y, id(font_big_date), FG, TextAlign::CENTER, "%a, %d %b", now);
+              } else {
+                it.strftime(cx, date_y, id(font_big_date), FG, TextAlign::CENTER, "%a, %b %d", now);
+              }
+            }
+          }
+
+          if (id(show_battery_status).state) {
+            // ---- layout ----
+            const int top = 2;
+            const int w   = 56;     // body width (no cap) - made wider
+            const int h   = 24;     // body height - made taller for 14px font
+            const int capw = 5;     // cap width
+            const int caph = h - 8; // cap height
+            const int pad  = 3;     // inner padding
+
+            // center horizontally
+            const int cx = it.get_width() / 2;
+            const int x  = cx - (w + capw) / 2;
+            const int y  = top;
+
+            // percentage + color
+            float pct = id(battery_percentage).state;
+            if (pct < 0) pct = 0; else if (pct > 100) pct = 100;
+
+            Color lvl = Color(0x00, 0xA8, 0x00);      // green
+            if (pct <= 20)       lvl = Color(0xD0, 0x00, 0x00); // red
+            else if (pct <= 50)  lvl = Color(0xD0, 0x9A, 0x00); // yellow
+
+            // ---- body outline ----
+            it.filled_rectangle(x, y, w, h, id(idle_color));
+            it.rectangle(x, y, w, h, Color::WHITE); // white outline
+
+            // cap
+            const int capx = x + w;
+            const int capy = y + (h - caph) / 2;
+            it.filled_rectangle(capx, capy, capw, caph, Color::BLACK);
+            it.rectangle(capx, capy, capw, caph, Color::WHITE);
+
+            // inner black background
+            const int inx = x + pad;
+            const int iny = y + pad;
+            const int inw = w - 2*pad;
+            const int inh = h - 2*pad;
+            it.filled_rectangle(inx, iny, inw, inh, Color::BLACK);
+
+            // level fill
+            int fw = (int)(inw * (pct / 100.0f));
+            if (fw > 0) it.filled_rectangle(inx, iny, fw, inh, lvl);
+            it.rectangle(inx, iny, inw, inh, Color::WHITE);
+
+            // ---- percentage text INSIDE ----
+            char txt[8];
+            snprintf(txt, sizeof(txt), "%.0f%%", pct);
+
+            // center text in body
+            const int tx = x + w / 2;
+            const int ty = y + h / 2;
+            it.printf(tx+1, ty+1, id(font_battery), Color::BLACK, TextAlign::CENTER, "%s", txt);
+            it.printf(tx,   ty,   id(font_battery), Color::WHITE, TextAlign::CENTER, "%s", txt);
+          }
+      - id: empty_clock
+        lambda: |-
+          it.fill(Color::BLACK);
+          const int W = it.get_width();
+          const int H = it.get_height();
+          // MUST be temp_fullscreen here:
+          it.image(W / 2, H / 2, id(temp_fullscreen), ImageAlign::CENTER);
+      - id: presence_sensor_clock
+        lambda: |-
+          const int W = it.get_width();
+          const int H = it.get_height();
+
+          if (id(clock_show_wallpaper).state) {
+            it.image(W / 2, H / 2, id(clock_background), ImageAlign::CENTER);
+          } else {
+            it.fill(Color::BLACK);
+          }
+
+          // Clock color
+          float rr = id(clock_color_picker).current_values.get_red();
+          float gg = id(clock_color_picker).current_values.get_green();
+          float bb = id(clock_color_picker).current_values.get_blue();
+          if (rr == 0.0f && gg == 0.0f && bb == 0.0f) { rr = gg = bb = 1.0f; }
+          const Color FG((uint8_t)(rr * 255.0f), (uint8_t)(gg * 255.0f), (uint8_t)(bb * 255.0f));
+
+          // Geometry
+          const int MINWH = std::min(W, H);
+          const bool SMALL = (MINWH <= 240);
+          const bool MED   = (!SMALL && MINWH <= 320);
+          const int SAFE   = SMALL ? std::max(24, MINWH / 9)
+                                   : MED   ? std::max(28, MINWH / 9)
+                                           : std::max(32, MINWH / 8);
+          const int L = SAFE, R = W - SAFE;
+          const int T = SAFE, B = H - SAFE;
+          const int AREA_W = R - L;
+          const int AREA_H = B - T;
+
+          const int GAP = SMALL ? std::max(8,  MINWH / 36)
+                                : std::max(10, MINWH / 32);
+          const float SCALE        = SMALL ? 0.80f : 0.86f;
+          const float CENTER_SCALE = SMALL ? 0.52f : 0.60f;
+
+          const float baseCell = std::min((AREA_W - GAP) / 2.0f, (AREA_H - GAP) / 2.0f);
+          const int CELL = std::max(20, (int)(baseCell * SCALE));
+          const int GRID_W = 2 * CELL + GAP;
+          const int GRID_H = 2 * CELL + GAP;
+
+          const bool SHOW_TIME  = id(clock_show_time).state;
+          const bool SHOW_SECS  = id(clock_show_seconds).state;
+          auto &time_font = (MINWH >= 320) ? id(font_big_clock_mono) : id(font_big_date);
+          const int time_h  = (MINWH >= 320) ? 42 : 28;
+          const int gap_clk = SMALL ? 8 : 10;
+
+          const int BLOCK_H = GRID_H + (SHOW_TIME ? (gap_clk + time_h) : 0);
+          const int ORGX = L + (AREA_W - GRID_W) / 2;
+          const int ORGY = T + std::max(0, (AREA_H - BLOCK_H) / 2);
+
+          const int xL  = ORGX;
+          const int xR  = ORGX + CELL + GAP;
+          const int yT  = ORGY;
+          const int yB  = ORGY + CELL + GAP;
+
+          const int CS  = std::max(16, (int)(CELL * CENTER_SCALE));
+          const int CW  = CELL;
+          const int CH  = CS;
+          const int cX  = ORGX + GRID_W / 2 - CW / 2;
+          const int cY  = ORGY + GRID_H / 2 - CH / 2;
+
+          // Colors
+          const Color C1_ON(0x5b,0xc0,0xde);
+          const Color C2_ON(0x8c,0xc4,0x3c);
+          const Color C3_ON(0xD5,0x1B,0x21);
+          const Color C4_ON(0x00,0x00,0xFF);
+          const Color C5_ON(0xFC,0xD4,0x44);
+
+          const Color FILL_OFF   = Color::BLACK;
+          const Color EDGE_WHITE = Color::WHITE;
+          const Color LED_RED(255, 0, 0);
+          const Color LED_RED_BORDER(180, 0, 0);
+
+          auto fit_label = [&](const char* label, int w) -> std::string {
+            int max_chars = std::max(3, (w - 10) / 7);
+            std::string s(label ? label : "");
+            if ((int)s.size() <= max_chars) return s;
+            if (max_chars <= 1) return std::string("…");
+            return s.substr(0, max_chars - 1) + "…";
+          };
+
+          auto draw_presence_led = [&](int x, int y, int w, bool right_side) {
+            const int inset  = std::max(4, CELL / 12);
+            const int radius = std::max(3, CELL / 12);
+            int cx = right_side ? (x + w - inset - radius) : (x + inset + radius);
+            int cy = y + inset + radius;
+            it.filled_circle(cx, cy, radius, LED_RED);
+            it.circle(cx, cy, radius, LED_RED_BORDER);
+          };
+
+          auto draw_room = [&](int x, int y, int w, int h,
+                               const char* label,
+                               esphome::binary_sensor::BinarySensor *presence,
+                               esphome::binary_sensor::BinarySensor *light_bs,
+                               const Color &on_col,
+                               bool right_side) {
+            bool light_on = (light_bs && light_bs->has_state() && light_bs->state);
+            Color fill_col = light_on ? on_col : FILL_OFF;
+
+            it.filled_rectangle(x, y, w, h, fill_col);
+            it.rectangle(x, y, w, h, EDGE_WHITE);
+
+            if (id(clock_show_dots).state) {
+              std::string txt = fit_label(label, w);
+              it.printf(x + w/2, y + h/2, id(font_battery), Color::WHITE, TextAlign::CENTER, "%s", txt.c_str());
+            }
+
+            bool motion = (presence && presence->has_state() && presence->state);
+            if (motion) { draw_presence_led(x, y, w, right_side); }
+          };
+
+          // Grid
+          draw_room(xL, yT, CELL, CELL, "${sensor1_label}", id(ha_sensor1), id(ha_light1), C1_ON, false);
+          draw_room(xR, yT, CELL, CELL, "${sensor2_label}", id(ha_sensor2), id(ha_light2), C2_ON, true);
+          draw_room(xL, yB, CELL, CELL, "${sensor3_label}", id(ha_sensor3), id(ha_light3), C3_ON, false);
+          draw_room(xR, yB, CELL, CELL, "${sensor4_label}", id(ha_sensor4), id(ha_light4), C4_ON, true);
+          draw_room(cX, cY, CW,   CH,   "${sensor5_label}", id(ha_sensor5), id(ha_light5), C5_ON, false);
+
+          // Time
+          if (SHOW_TIME) {
+            auto now = id(homeassistant_time).now();
+            const int CX = (L + R) / 2;
+            const int time_y = ORGY + GRID_H + gap_clk;
+
+            if (id(clock_24h).state) {
+              if (SHOW_SECS) it.strftime(CX, time_y, time_font, FG, TextAlign::TOP_CENTER, "%H:%M:%S", now);
+              else           it.strftime(CX, time_y, time_font, FG, TextAlign::TOP_CENTER, "%H:%M",    now);
+            } else {
+              if (SHOW_SECS) it.strftime(CX, time_y, time_font, FG, TextAlign::TOP_CENTER, "%I:%M:%S%p", now);
+              else           it.strftime(CX, time_y, time_font, FG, TextAlign::TOP_CENTER, "%I:%M%p",    now);
+            }
+          }
+
+          // Battery chip
+          if (id(show_battery_status).state) {
+            const int top = 2;
+            const int w   = 56;
+            const int h   = 24;
+            const int capw = 5;
+            const int caph = h - 8;
+            const int pad  = 3;
+
+            const int cx = it.get_width() / 2;
+            const int x  = cx - (w + capw) / 2;
+            const int y  = top;
+
+            float pct = id(battery_percentage).state;
+            if (pct < 0) pct = 0; else if (pct > 100) pct = 100;
+
+            Color lvl = Color(0x00, 0xA8, 0x00);
+            if (pct <= 20)       lvl = Color(0xD0, 0x00, 0x00);
+            else if (pct <= 50)  lvl = Color(0xD0, 0x9A, 0x00);
+
+            it.filled_rectangle(x, y, w, h, Color::BLACK);
+            it.rectangle(x, y, w, h, Color::WHITE);
+
+            const int capx = x + w;
+            const int capy = y + (h - caph) / 2;
+            it.filled_rectangle(capx, capy, capw, caph, Color::BLACK);
+            it.rectangle(capx, capy, capw, caph, Color::WHITE);
+
+            const int inx = x + pad;
+            const int iny = y + pad;
+            const int inw = w - 2*pad;
+            const int inh = h - 2*pad;
+            it.filled_rectangle(inx, iny, inw, inh, Color::BLACK);
+
+            int fw = (int)(inw * (pct / 100.0f));
+            if (fw > 0) it.filled_rectangle(inx, iny, fw, inh, lvl);
+            it.rectangle(inx, iny, inw, inh, Color::WHITE);
+
+            char txt[8];
+            snprintf(txt, sizeof(txt), "%.0f%%", pct);
+            it.printf(x + w/2 + 1, y + h/2 + 1, id(font_battery), Color::BLACK, TextAlign::CENTER, "%s", txt);
+            it.printf(x + w/2,     y + h/2,     id(font_battery), Color::WHITE, TextAlign::CENTER, "%s", txt);
+          }
+      - id: weather_clock
+        lambda: |-
+          const int W = it.get_width();
+          const int H = it.get_height();
+
+          if (id(clock_show_wallpaper).state) {
+            it.image(W / 2, H / 2, id(clock_background), ImageAlign::CENTER);
+          } else {
+            it.fill(Color::BLACK);
+          }
+
+          float rr = id(clock_color_picker).current_values.get_red();
+          float gg = id(clock_color_picker).current_values.get_green();
+          float bb = id(clock_color_picker).current_values.get_blue();
+          if (rr == 0.0f && gg == 0.0f && bb == 0.0f) { rr = gg = bb = 1.0f; }
+          const Color FG((uint8_t)(rr * 255.0f), (uint8_t)(gg * 255.0f), (uint8_t)(bb * 255.0f));
+
+          const bool SMALL = (W <= 240 || H <= 240);
+          const int SAFE   = SMALL ? std::max(24, std::min(W, H) / 10)
+                                   : std::max(28, std::min(W, H) / 9);
+          const int GAP    = SMALL ? std::max(8,  std::min(W, H) / 36)
+                                   : std::max(10, std::min(W, H) / 32);
+          const int chipH  = SMALL ? 22 : 30;
+          const int line_h = SMALL ? 24 : 44;
+          const int pad    = SMALL ? 6  : 8;
+
+          auto &time_font = SMALL ? id(font_big_date) : id(font_big_clock_mono);
+          auto &temp_font = time_font;
+
+          const int L = SAFE, R = W - SAFE;
+          const int T = SAFE, B = H - SAFE;
+          const int AREA_H = B - T;
+          const int CX = (L + R) / 2;
+
+          const bool SHOW_TIME = id(clock_show_time).state;
+          const bool SHOW_DATE = id(clock_show_date).state;
+          const bool SHOW_SECS = id(clock_show_seconds).state;
+          const bool SHOW_DOTS = id(clock_show_dots).state;
+
+          const int gap_time_tempbox = SHOW_TIME ? (SMALL ? 4 : 6) : 0;
+          const int temp_box_h       = line_h + (SMALL ? 6 : 10);
+
+          const int colW2 = (R - L - GAP) / 2;
+          const int num_rows = SHOW_DOTS ? 3 : 2;
+          const int rows_block_h = num_rows * chipH + (num_rows - 1) * GAP;
+
+          const int gap_box_rows   = (SMALL ? 8 : 10);
+          const int gap_rows_date  = SHOW_DATE ? (SMALL ? 2 : 4) : 0;
+          const int date_pad       = 22;
+
+          int content_h = 0;
+          if (SHOW_TIME) content_h += line_h;
+          content_h += gap_time_tempbox;
+          content_h += temp_box_h;
+          content_h += gap_box_rows;
+          content_h += rows_block_h;
+          if (SHOW_DATE) content_h += (gap_rows_date + date_pad);
+
+          int y = T + std::max(0, (AREA_H - content_h) / 2);
+
+          auto now = id(homeassistant_time).now();
+          if (SHOW_TIME) {
+            if (id(clock_24h).state) {
+              if (SHOW_SECS) it.strftime(CX, y, time_font, FG, TextAlign::TOP_CENTER, "%H:%M:%S", now);
+              else           it.strftime(CX, y, time_font, FG, TextAlign::TOP_CENTER, "%H:%M",    now);
+            } else {
+              if (SHOW_SECS) it.strftime(CX, y, time_font, FG, TextAlign::TOP_CENTER, "%I:%M:%S%p", now);
+              else           it.strftime(CX, y, time_font, FG, TextAlign::TOP_CENTER, "%I:%M%p",    now);
+            }
+            y += line_h + gap_time_tempbox;
+          }
+
+          std::string tunit = id(ha_weather_temperature_unit).state.c_str();
+          if (tunit.empty()) tunit = "°C";
+          char tbuf[20] = "N/A";
+          if (id(ha_weather_temperature).has_state()) {
+            float tv = id(ha_weather_temperature).state;
+            if (fabsf(tv - roundf(tv)) < 0.05f) snprintf(tbuf, sizeof(tbuf), "%.0f%s", tv, tunit.c_str());
+            else                                 snprintf(tbuf, sizeof(tbuf), "%.1f%s", tv, tunit.c_str());
+          }
+
+          const int temp_x = L;
+          const int temp_w = R - L;
+          const int temp_y = y;
+          it.filled_rectangle(temp_x, temp_y, temp_w, temp_box_h, Color(20,20,20));
+          it.rectangle(temp_x, temp_y, temp_w, temp_box_h, Color::WHITE);
+          it.printf(temp_x + temp_w/2, temp_y + temp_box_h/2, temp_font, Color::WHITE, TextAlign::CENTER, "%s", tbuf);
+          y += temp_box_h + gap_box_rows;
+
+          auto chip = [&](int x, int yy, int w, int h, const char* label, const char* value) {
+            it.filled_rectangle(x, yy, w, h, Color(20,20,20));
+            it.rectangle(x, yy, w, h, Color::WHITE);
+            it.printf(x + pad,     yy + h/2, id(font_battery), Color::WHITE, TextAlign::CENTER_LEFT,  "%s", label);
+            it.printf(x + w - pad, yy + h/2, id(font_battery), Color::WHITE, TextAlign::CENTER_RIGHT, "%s", value);
+          };
+
+          char cloud_buf[12] = "N/A";
+          if (id(ha_weather_cloud_coverage).has_state())
+            snprintf(cloud_buf, sizeof(cloud_buf), "%.0f%%", id(ha_weather_cloud_coverage).state);
+
+          char uv_buf[12] = "N/A";
+          if (id(ha_weather_uv_index).has_state())
+            snprintf(uv_buf, sizeof(uv_buf), "%.1f", id(ha_weather_uv_index).state);
+
+          std::string wunit = id(ha_weather_wind_speed_unit).state.c_str();
+
+          char wind_buf[20] = "N/A";
+          if (id(ha_weather_wind_speed).has_state()) {
+            if (wunit.empty()) snprintf(wind_buf, sizeof(wind_buf), "%.1f", id(ha_weather_wind_speed).state);
+            else               snprintf(wind_buf, sizeof(wind_buf), "%.1f %s", id(ha_weather_wind_speed).state, wunit.c_str());
+          }
+
+          char gust_buf[20] = "N/A";
+          if (id(ha_weather_wind_gust).has_state()) {
+            if (wunit.empty()) snprintf(gust_buf, sizeof(gust_buf), "%.1f", id(ha_weather_wind_gust).state);
+            else               snprintf(gust_buf, sizeof(gust_buf), "%.1f %s", id(ha_weather_wind_gust).state, wunit.c_str());
+          }
+
+          char hum_buf[12] = "N/A";
+          if (id(ha_weather_humidity).has_state())
+            snprintf(hum_buf, sizeof(hum_buf), "%.0f%%", id(ha_weather_humidity).state);
+
+          std::string punit = id(ha_weather_pressure_unit).state.c_str();
+          if (punit.empty()) punit = "hPa";
+          char pres_buf[22] = "N/A";
+          if (id(ha_weather_pressure).has_state())
+            snprintf(pres_buf, sizeof(pres_buf), "%.0f %s", id(ha_weather_pressure).state, punit.c_str());
+
+          const int xLcol = L;
+          const int xRcol = L + colW2 + GAP;
+
+          const int row1y = y;
+          chip(xLcol, row1y, colW2, chipH, "Cloud", cloud_buf);
+          chip(xRcol, row1y, colW2, chipH, "UV",    uv_buf);
+
+          const int row2y = row1y + chipH + GAP;
+          chip(xLcol, row2y, colW2, chipH, "Wind",  wind_buf);
+          chip(xRcol, row2y, colW2, chipH, "Gust",  gust_buf);
+
+          int last_row_bottom = row2y + chipH;
+          if (SHOW_DOTS) {
+            const int row3y = row2y + chipH + GAP;
+            chip(xLcol, row3y, colW2, chipH, "Humidity", hum_buf);
+            chip(xRcol, row3y, colW2, chipH, "Pressure", pres_buf);
+            last_row_bottom = row3y + chipH;
+          }
+
+          y = last_row_bottom;
+
+          if (SHOW_DATE) {
+            y += gap_rows_date;
+            if (id(clock_24h).state)
+              it.strftime(CX, y, id(font_big_date), FG, TextAlign::TOP_CENTER, "%a, %d %b", now);
+            else
+              it.strftime(CX, y, id(font_big_date), FG, TextAlign::TOP_CENTER, "%a, %b %d", now);
+          }
+
+          if (id(show_battery_status).state) {
+            const int top = 2, bw = 56, bh = 24, capw = 5, pad2 = 3;
+            const int cx = it.get_width() / 2;
+            const int bx = cx - (bw + capw) / 2;
+            const int by = top;
+
+            float pct = id(battery_percentage).state;
+            if (pct < 0) pct = 0; else if (pct > 100) pct = 100;
+
+            Color lvl = Color(0x00,0xA8,0x00);
+            if (pct <= 20)       lvl = Color(0xD0,0x00,0x00);
+            else if (pct <= 50)  lvl = Color(0xD0,0x9A,0x00);
+
+            it.filled_rectangle(bx, by, bw, bh, Color::BLACK);
+            it.rectangle(bx, by, bw, bh, Color::WHITE);
+
+            const int capx = bx + bw, caph = bh - 8;
+            const int capy = by + (bh - caph) / 2;
+            it.filled_rectangle(capx, capy, capw, caph, Color::BLACK);
+            it.rectangle(capx, capy, capw, caph, Color::WHITE);
+
+            const int inx = bx + pad2, iny = by + pad2, inw = bw - 2*pad2, inh = bh - 2*pad2;
+            it.filled_rectangle(inx, iny, inw, inh, Color::BLACK);
+
+            const int fw = (int)(inw * (pct / 100.0f));
+            if (fw > 0) it.filled_rectangle(inx, iny, fw, inh, lvl);
+            it.rectangle(bx, by, bw, bh, Color::WHITE);
+
+            char pct_txt[8];
+            snprintf(pct_txt, sizeof(pct_txt), "%.0f%%", pct);
+            it.printf(bx + bw/2 + 1, by + bh/2 + 1, id(font_battery), Color::BLACK, TextAlign::CENTER, "%s", pct_txt);
+            it.printf(bx + bw/2,     by + bh/2,     id(font_battery), Color::WHITE, TextAlign::CENTER, "%s", pct_txt);
+          }
+      - id: small_clock
+        lambda: |-
+          const int W = it.get_width();   // 128
+          const int H = it.get_height();  //  64
+
+          // --- background / optional wallpaper ---
+          it.fill(Color::BLACK);
+          if (id(clock_show_wallpaper).state) {
+            it.image(W/2, H/2, id(clock_background), ImageAlign::CENTER);
+          }
+
+          // --- color from HA color wheel (default white) ---
+          float rr = id(clock_color_picker).current_values.get_red();
+          float gg = id(clock_color_picker).current_values.get_green();
+          float bb = id(clock_color_picker).current_values.get_blue();
+          if (rr == 0.0f && gg == 0.0f && bb == 0.0f) { rr = gg = bb = 1.0f; }
+          const Color FG((uint8_t)(rr * 255), (uint8_t)(gg * 255), (uint8_t)(bb * 255));
+
+          auto now = id(homeassistant_time).now();
+
+          // --- shared top metrics (so dots can center to temp) ---
+          const int TOP     = 2;     // top padding
+          const int TEMP_H  = 14;    // font_battery height
+          const int TEMP_Y  = TOP;   // temp top align
+          const int TEMP_CY = TEMP_Y + TEMP_H/2;  // vertical center of temp line
+
+          // --- tiny temperature (top-right) ---
+          {
+            std::string tunit = id(ha_weather_temperature_unit).state.c_str();
+            if (tunit.empty()) tunit = "°C";
+            char tbuf[20] = "N/A";
+            if (id(ha_weather_temperature).has_state()) {
+              float tv = id(ha_weather_temperature).state;
+              if (fabsf(tv - roundf(tv)) < 0.05f) snprintf(tbuf, sizeof(tbuf), "%.0f%s", tv, tunit.c_str());
+              else                                 snprintf(tbuf, sizeof(tbuf), "%.1f%s", tv, tunit.c_str());
+            }
+            it.printf(W - 2, TEMP_Y, id(font_battery), Color::WHITE, TextAlign::TOP_RIGHT, "%s", tbuf);
+          }
+
+          // --- presence dots (top-left) — centered to temp line, larger, respects switch ---
+          if (id(clock_show_dots).state) {
+            const int r   = 4;     // larger radius
+            const int dx  = 14;    // spacing between centers
+            const int x0  = 4 + r; // left margin + radius
+            const int y   = TEMP_CY;
+
+            // colors (on SH1106 it'll just be white, harmless to keep)
+            const Color COLORS[5] = {
+              Color(0x5b,0xc0,0xde), Color(0x8c,0xc4,0x3c), Color(0xD5,0x1B,0x21),
+              Color(0x00,0x00,0xFF), Color(0xFC,0xD4,0x44)
+            };
+
+            esphome::binary_sensor::BinarySensor* sensors[5] = {
+              id(ha_sensor1), id(ha_sensor2), id(ha_sensor3), id(ha_sensor4), id(ha_sensor5)
+            };
+
+            int x = x0;
+            for (int i = 0; i < 5; i++, x += dx) {
+              bool present = sensors[i] && sensors[i]->has_state() && sensors[i]->state;
+              if (present) it.filled_circle(x, y, r, COLORS[i]);
+              else         it.circle(x, y, r, Color::WHITE);
+            }
+          }
+
+          // --- time (monospaced; centered; no jitter) ---
+          if (id(clock_show_time).state) {
+            const int time_y = 30; // tuned for 24px mono on 128x64
+            if (id(clock_24h).state) {
+              if (id(clock_show_seconds).state)
+                it.strftime(W/2, time_y, id(font_small_clock_mono), FG, TextAlign::CENTER, "%H:%M:%S", now);
+              else
+                it.strftime(W/2, time_y, id(font_small_clock_mono), FG, TextAlign::CENTER, "%H:%M", now);
+            } else {
+              if (id(clock_show_seconds).state)
+                it.strftime(W/2, time_y, id(font_small_clock_mono), FG, TextAlign::CENTER, "%I:%M:%S%p", now);
+              else
+                it.strftime(W/2, time_y, id(font_small_clock_mono), FG, TextAlign::CENTER, "%I:%M%p", now);
+            }
+          }
+
+          // --- date (small, under time; same format as other clocks) ---
+          if (id(clock_show_date).state) {
+            const int date_y = 50;  // a touch lower to clear the time
+            if (id(clock_24h).state)
+              it.strftime(W/2, date_y, id(font_battery), FG, TextAlign::CENTER, "%a, %d %b", now);
+            else
+              it.strftime(W/2, date_y, id(font_battery), FG, TextAlign::CENTER, "%a, %b %d", now);
+          }
+      - id: analog_clock
+        lambda: |-
+          // ----- basics & background -----
+          const int W  = it.get_width();
+          const int H  = it.get_height();
+          const int CX = W / 2;
+          const int CY = H / 2;
+
+          if (id(clock_show_wallpaper).state) {
+            it.image(CX, CY, id(clock_background), ImageAlign::CENTER);
+          } else {
+            it.fill(Color::BLACK);
+          }
+
+          // ----- color & fonts -----
+          float rr = id(clock_color_picker).current_values.get_red();
+          float gg = id(clock_color_picker).current_values.get_green();
+          float bb = id(clock_color_picker).current_values.get_blue();
+          if (rr == 0.0f && gg == 0.0f && bb == 0.0f) { rr = gg = bb = 1.0f; }
+          const Color FG((uint8_t)(rr * 255.0f), (uint8_t)(gg * 255.0f), (uint8_t)(bb * 255.0f));
+          const Color FACE_ACC(60,60,60);
+          const Color RING(180,180,180);
+          const Color SEC_COL = id(seconds_dot_color);
+
+          auto &date_font = id(font_big_date);
+
+          // ----- geometry -----
+          const int M       = std::max(8, std::min(W, H) / 18);
+          const int R       = std::min(W, H) / 2 - M;
+          const int R_TICKS = R - std::max(4, R / 18);
+
+          const int  MINWH     = std::min(W, H);
+          const bool TINY      = (MINWH <= 160);
+          auto &num_font       = TINY ? id(font_battery) : id(font_big_date);
+          const bool DRAW_NUMS = id(clock_show_time).state && !TINY;
+
+          const int R_NUMBERS  = R - std::max(16, R / 6);
+          const int NUM_PAD    = TINY ? std::max(2, R / 28) : std::max(4, R / 22);
+
+          // ----- LUT -----
+          static bool LUT_INIT = false;
+          static int16_t ux[60], uy[60];
+          if (!LUT_INIT) {
+            const float TWO_PI = 6.2831853f;
+            for (int i = 0; i < 60; i++) {
+              float a = (i / 60.0f) * TWO_PI - (3.1415926f / 2.0f);
+              ux[i] = (int16_t) lroundf(cosf(a) * 10000.0f);
+              uy[i] = (int16_t) lroundf(sinf(a) * 10000.0f);
+            }
+            LUT_INIT = true;
+          }
+          auto rx = [&](int r, int i){ return CX + (int)(( (long)r * ux[i]) / 10000L); };
+          auto ry = [&](int r, int i){ return CY + (int)(( (long)r * uy[i]) / 10000L); };
+
+          // ----- time (smooth sweep) -----
+          auto now = id(homeassistant_time).now();
+          int s = now.second;
+          int m = now.minute;
+          int h = now.hour % 12;
+
+          static int last_sec = -1;
+          static uint32_t sec_anchor_ms = 0;
+          if (s != last_sec) { last_sec = s; sec_anchor_ms = millis(); }
+          float sec_frac = (millis() - sec_anchor_ms) / 1000.0f;
+          if (sec_frac < 0.0f) sec_frac = 0.0f;
+          if (sec_frac > 0.999f) sec_frac = 0.999f;
+
+          float s_pos = (s + sec_frac) / 60.0f;
+          float m_pos = (m + (id(clock_show_seconds).state ? s_pos : 0.0f)) / 60.0f;
+          float h_pos = (h + m_pos) / 12.0f;
+
+          auto polar = [&](float pos, int r, int &ox, int &oy) {
+            const float TWO_PI = 6.2831853f;
+            float a = pos * TWO_PI - (3.1415926f / 2.0f);
+            ox = CX + (int) lroundf(r * cosf(a));
+            oy = CY + (int) lroundf(r * sinf(a));
+          };
+
+          // ----- hand sizes -----
+          const int L_H = (int)(R * 0.52f);
+          const int L_M = (int)(R * 0.72f);
+          const int L_S = (int)(R * 0.82f);
+          const int W_H = std::max(TINY ? 2 : 3, R / 16);
+          const int W_M = std::max(TINY ? 1 : 2, R / 22);
+          const int W_S = std::max(1, R / 50);
+
+          auto thick_hand = [&](int x0, int y0, int x1, int y1, int w, Color col) {
+            if (w <= 1) { it.line(x0, y0, x1, y1, col); return; }
+            float dx = (float)(x1 - x0), dy = (float)(y1 - y0);
+            float L = sqrtf(dx*dx + dy*dy);
+            if (L < 1.0f) { it.line(x0, y0, x1, y1, col); return; }
+            float px = -dy / L, py = dx / L;
+            int half = w / 2;
+            for (int t = -half; t <= half; ++t) {
+              int ox = (int) lroundf(px * t);
+              int oy = (int) lroundf(py * t);
+              it.line(x0 + ox, y0 + oy, x1 + ox, y1 + oy, col);
+            }
+          };
+
+          // ----- dial (if dots shown) -----
+          if (id(clock_show_dots).state) {
+            it.circle(CX, CY, R,   RING);
+            it.circle(CX, CY, R-2, FACE_ACC);
+
+            for (int i = 0; i < 60; i++) {
+              bool major    = (i % 5  == 0);
+              bool quadrant = (i % 15 == 0);
+              int  len_base = quadrant ? std::max(10, R / 6)
+                                       : (major ? std::max(8, R / 10)
+                                                : std::max(4, R / 18));
+              Color col = major ? FG : FACE_ACC;
+
+              int r_outer = R_TICKS;
+              int r_inner = R_TICKS - len_base;
+              if (quadrant && DRAW_NUMS) {
+                r_inner = std::max(r_inner, R_NUMBERS + NUM_PAD);
+              }
+
+              int x1 = rx(r_outer, i), y1 = ry(r_outer, i);
+              int x2 = rx(r_inner, i), y2 = ry(r_inner, i);
+
+              if (quadrant) {
+                it.line(x1, y1, x2, y2, col);
+                it.line(x1+1, y1, x2+1, y2, col);
+              } else {
+                it.line(x1, y1, x2, y2, col);
+              }
+            }
+
+            if (DRAW_NUMS) {
+              auto print_center = [&](int i, const char* txt) {
+                int tx = rx(R_NUMBERS, i);
+                int ty = ry(R_NUMBERS, i);
+                it.printf(tx, ty, num_font, FG, TextAlign::CENTER, "%s", txt);
+              };
+              print_center(0,  "12");
+              print_center(15, "3");
+              print_center(30, "6");
+              print_center(45, "9");
+            }
+          }
+
+          // ----- hands -----
+          { int hx, hy; polar(h_pos, L_H, hx, hy); thick_hand(CX, CY, hx, hy, W_H, FG); }
+          { int mx, my; polar(m_pos, L_M, mx, my); thick_hand(CX, CY, mx, my, W_M, FG); }
+          if (id(clock_show_seconds).state) {
+            int sx, sy; polar(s_pos, L_S, sx, sy);
+            it.line(CX, CY, sx, sy, SEC_COL);
+            int bwx, bwy; polar(fmodf(s_pos + 0.5f, 1.0f), (int)(R * 0.18f), bwx, bwy);
+            it.line(CX, CY, bwx, bwy, SEC_COL);
+          }
+          it.filled_circle(CX, CY, std::max(3, R / 20), FG);
+
+          // ----- date -----
+          if (id(clock_show_date).state) {
+            const int date_y = CY + (int)(R * 0.55f);
+            if (id(clock_24h).state)
+              it.strftime(CX, date_y, date_font, FG, TextAlign::TOP_CENTER, "%a, %d %b", now);
+            else
+              it.strftime(CX, date_y, date_font, FG, TextAlign::TOP_CENTER, "%a, %b %d", now);
+          }
+
+          // Battery chip
+          if (id(show_battery_status).state) {
+            const int top = 2;
+            const int w   = 56;
+            const int h   = 24;
+            const int capw = 5;
+            const int caph = h - 8;
+            const int pad  = 3;
+
+            const int cx = it.get_width() / 2;
+            const int x  = cx - (w + capw) / 2;
+            const int y  = top;
+
+            float pct = id(battery_percentage).state;
+            if (pct < 0) pct = 0; else if (pct > 100) pct = 100;
+
+            Color lvl = Color(0x00, 0xA8, 0x00);
+            if (pct <= 20)       lvl = Color(0xD0, 0x00, 0x00);
+            else if (pct <= 50)  lvl = Color(0xD0, 0x9A, 0x00);
+
+            it.filled_rectangle(x, y, w, h, Color::BLACK);
+            it.rectangle(x, y, w, h, Color::WHITE);
+
+            const int capx = x + w;
+            const int capy = y + (h - caph) / 2;
+            it.filled_rectangle(capx, capy, capw, caph, Color::BLACK);
+            it.rectangle(capx, capy, capw, caph, Color::WHITE);
+
+            const int inx = x + pad;
+            const int iny = y + pad;
+            const int inw = w - 2*pad;
+            const int inh = h - 2*pad;
+            it.filled_rectangle(inx, iny, inw, inh, Color::BLACK);
+
+            int fw = (int)(inw * (pct / 100.0f));
+            if (fw > 0) it.filled_rectangle(inx, iny, fw, inh, lvl);
+            it.rectangle(x, y, w, h, Color::WHITE);
+
+            char txt[8];
+            snprintf(txt, sizeof(txt), "%.0f%%", pct);
+            it.printf(x + w/2 + 1, y + h/2 + 1, id(font_battery), Color::BLACK, TextAlign::CENTER, "%s", txt);
+            it.printf(x + w/2,     y + h/2,     id(font_battery), Color::WHITE, TextAlign::CENTER, "%s", txt);
+          }
+

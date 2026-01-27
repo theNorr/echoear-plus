@@ -36,7 +36,7 @@ substitutions:
   #Other settings:
   startup_sound: "Home_Connected" # (options are: available, Home_Connected, Home_Connected_Male, Computer_Ready)
   clock_background_image: "tron" # (options are: clock, hacker, ha-girl, mission, starrysky, waves, tron)
-  imagemodel: "Gwen" # options are:
+  imagemodel: "Eyes" # options are:
   # Alita, Alfred, Astrobot, Buzz, Casita, Cybergirl, Dory, EVE, Eyes, Eyes2, GLaDOS, Girl1, Guy1, Guy2, Gwen, HA-character, ha-girl, Hacker, Harley,
   # Jarvis, Luffy, Mario, Max, Prime, Robochibi, Robocop, Robot, Robotgirl, Shaun
 
@@ -108,6 +108,7 @@ esphome:
       then:
         - script.execute: draw_display
         - delay: 30s
+        - light.turn_on: sled
         - if:
             condition:
               lambda: return id(init_in_progress);
@@ -139,6 +140,8 @@ ota:
   - platform: esphome
     password: !secret emo_dot_ota
     id: ota_esphome
+    on_begin:
+    - light.turn_off: sled
 
 #A fallback mechanism for when connecting to the configured WiFi fails, i.e. activates the AP:
 captive_portal:
@@ -148,7 +151,26 @@ http_request:
 
 #Enables logging, and related configuration:
 logger:
-  level: DEBUG
+  level: VERY_VERBOSE
+  logs:
+    touchscreen: DEBUG
+    cst816: DEBUG
+    i2c: DEBUG
+    substitutions: DEBUG
+    esp32: DEBUG
+    esphome: DEBUG
+    psram: DEBUG
+    wifi: DEBUG
+    ota: DEBUG
+    captive_portal: DEBUG
+    http_request: DEBUG
+    api: DEBUG
+    output: DEBUG
+    light: DEBUG
+    image: DEBUG
+    font: DEBUG
+    spi: VERY_VERBOSE
+    display: VERY_VERBOSE
 
 #Home Assistant and ioBroker use this native API:
 api:
@@ -1395,7 +1417,7 @@ light:
     icon: mdi:television
     entity_category: config
     output: backlight_output
-    restore_mode: ALWAYS_ON
+    restore_mode: ALWAYS_OFF
     default_transition_length: 250ms
   
   #Used in/by pages under display. When called it returns the color value stored in the corresponding output.
@@ -1916,6 +1938,7 @@ display:
     rotation: ${rotate_display}
     update_interval: never
     init_sequence:
+      - delay 255ms
       # -------- Vendor init (bank 0x28) --------
       - [0xF0, 0x28]
       - [0xF2, 0x28]
@@ -3695,4 +3718,3 @@ display:
             it.printf(x + w/2 + 1, y + h/2 + 1, id(font_battery), Color::BLACK, TextAlign::CENTER, "%s", txt);
             it.printf(x + w/2,     y + h/2,     id(font_battery), Color::WHITE, TextAlign::CENTER, "%s", txt);
           }
-
